@@ -8,7 +8,10 @@ import vue from '@astrojs/vue';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+     optimizeDeps: {
+      exclude: ['sharp', '@astrojs/image'],
+    },
   },
   image: {
     service: passthroughImageService(),
