@@ -12,7 +12,4 @@ export default defineConfig({
   },
 
   integrations: [vue()],
-  image: {
-    service: passthroughImageService(),
-  },
 });
