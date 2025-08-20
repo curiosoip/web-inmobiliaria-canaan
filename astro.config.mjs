@@ -12,9 +12,9 @@ export default defineConfig({
   },
   image: {
     service: {
-      entrypoint: 'astro/assets/services/null',
-      config: {}
-    }
+      entrypoint: 'astro/assets/services/null', 
+      config: {},
+    },
   },
   integrations: [vue()]
 });
