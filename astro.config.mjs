@@ -10,6 +10,11 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/null',
+      config: {}
+    }
+  },
   integrations: [vue()]
 });
