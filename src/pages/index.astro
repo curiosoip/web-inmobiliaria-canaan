@@ -1,0 +1,1035 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import logoCanaan from "../assets/logo.svg";
+import logoCanaanWhite from "../assets/logo_white.svg";
+import sobrenosotros00 from "../assets/imgs/00.jpg";
+import MapComponent from "../components/MapComponent.astro"
+
+import imglotes from "../assets/imgs/12.jpg"
+import imgconsultoria from "../assets/imgs/15.jpg"
+import imgimportacion from "../assets/imgs/16.jpg"
+import imgredcors from "../assets/imgs/17.jpg"
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Canaan Inmobiliaria</title>
+	</head>
+	<body class="min-h-screen bg-white">
+		<nav class="bg-slate-800 border-b border-amber-500 sticky w-full z-80 top-0 start-0">
+			<div
+				class=" flex flex-wrap items-center justify-between mx-auto "
+			>
+				<div
+					class=" px-4 lg:px-6 py-3 md:py-3 flex items-center justify-center md:justify-start"
+				>
+					<div class="flex items-center space-x-3">
+						
+						<Image src={logoCanaan} alt="Canaan Inmobiliaria" 
+							class="w-20 "/>
+					</div>
+				</div>
+				<div
+					class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse px-4"
+				>
+					<button
+						type="button"
+						class="text-amber-300 cursor-pointer border-2 border-amber-300 hover:text-amber-400   font-medium rounded-lg text-sm px-4 py-2 text-center"
+						>Ingresar</button
+					>
+					<button
+						data-collapse-toggle="navbar-sticky"
+						type="button"
+						class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:text-gray-300 focus:outline-none "
+						aria-controls="navbar-sticky"
+						aria-expanded="false"
+					>
+						<span class="sr-only">Open main menu</span>
+						<svg
+							class="w-5 h-5"
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 17 14"
+						>
+							<path
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M1 1h15M1 7h15M1 13h15"></path>
+						</svg>
+					</button>
+				</div>
+				<div
+					class="items-center justify-between hidden bg-slate-900 px-4 py-3 rounded-md w-full md:flex md:w-auto md:order-1"
+					id="navbar-sticky"
+				>
+					<ul
+						class="flex flex-col p-4 md:p-0 mt-2 gap-3 font-medium  md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 "
+					>
+						<li>
+							<a
+								href="#inicio"
+								class="text-amber-400 hover:text-amber-300 transition-all duration-300 font-semibold text-sm tracking-wider uppercase"
+							>
+								INICIO
+							</a>
+						</li>
+						<li>
+							<a
+								href="#servicios"
+								class="text-white hover:text-amber-300 transition-all duration-300 font-semibold text-sm tracking-wider uppercase"
+							>
+								SERVICIOS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#nosotros"
+								class="text-white hover:text-amber-300 transition-all duration-300 font-semibold text-sm tracking-wider uppercase"
+							>
+								NOSOTROS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#contacto"
+								class="text-white hover:text-amber-300 transition-all duration-300 font-semibold text-sm tracking-wider uppercase"
+							>
+								CONTACTO
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		
+	</body>
+
+	<section id="inicio" class="relative h-screen overflow-hidden">
+		<div class="absolute inset-0">
+		<div class="relative w-full h-full">
+
+			<video 
+			autoplay 
+			muted 
+			loop 
+			playsinline
+			id="hero-video"
+			transition:persist
+			class="object-cover w-full h-full transition-all duration-1000"
+			>
+			<source src="src/assets/bgvid.mp4" type="video/mp4" />
+			Tu navegador no soporta video en HTML5.
+			</video>
+
+			<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/60"></div>
+		</div>
+		</div>
+
+
+
+		<div class="relative z-10 flex items-center justify-center h-full">
+			<div
+				class="text-center text-white px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto"
+			>
+				<div class="mb-4 sm:mb-6">
+					<span
+						class="inline-block  backdrop-blur-sm border border-amber-400/30 text-amber-100 px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide"
+						id="slide-subtitle"
+					>
+						✨ CON LAS MEJORES CUOTAS DEL MERCADO
+					</span>
+				</div>
+
+				<h1
+					class=" font-bold mb-6 sm:mb-8 "
+				>
+					<span class="block text-3xl lg:text-6xl  text-white "
+						>LÍDERES EN CALIDAD DE</span
+					>
+					<span class="block text-3xl lg:text-6xl  text-amber-400"
+						>CONSTRUCCIÓN</span
+					>
+				</h1>
+
+				<div
+					class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4"
+				>
+					<a
+						href="#"
+						class="w-full gap-2 sm:w-auto bg-amber-500  hover:text-slate-950 text-slate-800 font-bold px-8 sm:px-12 py-2 text-base sm:text-lg rounded-lg  transition-all duration-300 group flex items-center justify-center"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/></svg>
+						Ver Lotes Disponibles
+						
+					</a>
+
+					<a
+						href="#"
+						class="w-full sm:w-auto gap-2 bg-white text-slate-700  hover:text-slate-950 font-bold px-8 sm:px-12 py-2 text-base sm:text-lg rounded-lg transition-all duration-300 group flex items-center justify-center"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h10V4zm0 6v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"/></svg>
+						Calcular Financiamiento
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="servicios" class="py-16 sm:py-20 lg:py-28 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12 sm:mb-16 lg:mb-20">
+				<h2
+					class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight"
+				>
+					SERVICIOS
+				</h2>
+				<p
+					class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4"
+				>
+					Ofrecemos soluciones integrales en construcción, bienes
+					raíces y tecnología avanzada
+				</p>
+			</div>
+
+			<div
+				class="grid grid-cols-1 lg:grid-cols-2 gap-8"
+			>
+				<!-- Venta de Lotes -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-start gap-4 justify-center "
+					>
+						<article class="flex w-full flex-col justify-start items-center gap-3">
+								<div
+									class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-amber-50 to-amber-100 border-2 border-amber-200 rounded-xl overflow-hidden group-hover:border-amber-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-amber-500/20"
+								>
+									<div
+										class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+									>
+									</div>
+									<Image src={imglotes} alt="Venta de Lotes" 
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+									<div class="absolute bottom-4 flex flex-col gap-1 left-4 right-4">
+										<div
+											class="bg-white/90 backdrop-blur-sm flex justify-start items-center gap-2   rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-amber-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+											<p
+												class="text-sm font-medium text-slate-700"
+											>
+												Lotes residenciales premium
+											</p>
+										</div>
+										<div
+											class="bg-white/90 backdrop-blur-sm flex justify-start items-center gap-2   rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-amber-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+											<p
+												class="text-sm font-medium text-slate-700"
+											>
+												Créditos accesibles
+											</p>
+										</div>
+									</div>
+								</div>
+								<div
+											class="bg-amber-500  text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+										>
+											VENTA DE LOTES
+										</div>
+								<p
+									class="text-gray-600 max-w-xs text-sm flex w-full justify-start "
+								>
+									Terrenos residenciales en las mejores
+									ubicaciones de Bolivia con servicios básicos
+									garantizados
+								</p>
+								
+						</article>	
+					
+
+						
+					</div>
+				</div>
+
+				<!-- Consultoría Constructiva -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+					>
+						<article class="flex w-full flex-col justify-start items-center gap-3">
+							<div
+							class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-200 rounded-xl overflow-hidden group-hover:border-teal-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-teal-500/20"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+							</div>
+							<Image src={imgconsultoria} alt="Consultoría Constructiva" 
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+	
+							<div class="absolute bottom-4 flex flex-col gap-1 left-4 right-4">
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-teal-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Ingeniería civil y arquitectura
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-teal-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Topografía y geodesia geométrica
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-teal-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Gestión y supervisión de construcción
+									</p>
+								</div>
+								
+							</div>
+						</div>
+						<div
+									class="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+								>
+									CONSULTORÍA CONSTRUCTIVA
+								</div>
+								<p
+									class="text-gray-600 max-w-xs text-sm flex w-full justify-start "
+								>
+									  Asesoramiento especializado en proyectos de construcción, planificación y optimización de recursos para obras seguras y eficientes en Bolivia
+
+								</p>
+
+						</article>
+						
+
+						
+					</div>
+				</div>
+
+				<!-- Importaciones -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+					>
+					<article class="flex w-full flex-col justify-start items-center gap-3">
+						<div
+							class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-slate-50 to-slate-100 border-2 border-slate-200 rounded-xl overflow-hidden group-hover:border-slate-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-slate-500/20"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+							</div>
+							<Image src={imgimportacion} alt="Importaciones" 
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+							
+							<div class="absolute flex flex-col gap-1 bottom-4 left-4 right-4">
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-slate-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Equipos y tecnología especializada
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+									class="bg-slate-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+								>
+									IMPORTACIONES
+								</div>
+								<p
+									class="text-gray-600 max-w-xs text-sm sm:text-base"
+								>
+									Equipos especializados y tecnología de
+									vanguardia para proyectos de construcción e
+									infraestructura
+								</p>
+
+					</article>
+						
+
+					</div>
+				</div>
+
+				<!-- Red CORS -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+					>
+						<article class="flex w-full flex-col justify-start items-center gap-3">
+							<div
+							class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-xl overflow-hidden group-hover:border-blue-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue-500/20"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+							</div>
+							<Image src={imgredcors} alt="Red CORS" 
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+						
+							<div class="absolute flex flex-col gap-1 bottom-4 left-4 right-4">
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-blue-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Red CORS - NTRIP
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-blue-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Correcciones GPS en tiempo real
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-blue-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Precisión centimétrica garantizada
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+									class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+								>
+									RED CORS
+								</div>
+								<p
+									class="text-gray-600 max-w-xs text-sm sm:text-base"
+								>
+									  Acceso a correcciones GPS en tiempo real para posicionamiento preciso y confiable en cualquier ubicación
+
+								</p>
+
+						</article>
+						
+						</div>
+					
+				</div>
+			</div>
+
+			<div class="text-center mt-16 sm:mt-20 bg-slate-500/20 py-10 px-10">
+				<div class="text-center mb-5">
+					<h2
+						class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight"
+					>
+						RECIBE UN PRESUPUESTO
+					</h2>
+					<p
+						class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4"
+					>
+						Ofrecemos cuotas adaptadas a tu bolsillo
+					</p>
+				</div>
+				<a
+					href="#"
+					class="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-amber-500 text-slate-800 hover:text-slate-950 px-8 sm:px-12 py-4 sm:py-6 rounded-lg  transition-all duration-300 group cursor-pointer"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h10V4zm0 6v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"/></svg>
+					<div class="text-center lg:text-left">
+						<div class="text-lg sm:text-xl font-bold">
+							Solicitar Cotización
+						</div>
+						<div class="text-sm opacity-90">
+							Obtén una propuesta personalizada
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="nosotros" class="py-16 sm:py-20 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12 sm:mb-16">
+				<h2
+					class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 sm:mb-6"
+				>
+					SOBRE NOSOTROS
+				</h2>
+			</div>
+
+			<div
+				class="relative bg-white rounded-xl  overflow-hidden"
+			>
+				<div class="grid grid-cols-1 lg:grid-cols-2">
+					<div class="relative h-full overflow-hidden">
+						<!-- capa oscura -->
+						<div class="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/70 to-transparent z-10"></div>
+
+						<!-- imagen con efecto parallax -->
+						<Image 
+						src={sobrenosotros00} 
+						alt="Canaan Inmobiliaria" 
+						class="w-full h-full object-cover object-center scale-110 will-change-transform transform-gpu motion-safe:animate-[parallax_20s_linear_infinite]"
+						/>
+						<div
+							class="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-20"
+						>
+							<div class="grid grid-cols-3 gap-2 sm:gap-4">
+								<div
+									class="bg-white/25 backdrop-blur-lg rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border border-white/20"
+								>
+									<div
+										class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1"
+									>
+										500+
+									</div>
+									<div
+										class="text-xs sm:text-sm text-white/90 font-medium"
+									>
+										Clientes Satisfechos
+									</div>
+								</div>
+								<div
+									class="bg-white/25 backdrop-blur-lg rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border border-white/20"
+								>
+									<div
+										class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1"
+									>
+										15+
+									</div>
+									<div
+										class="text-xs sm:text-sm text-white/90 font-medium"
+									>
+										Años Experiencia
+									</div>
+								</div>
+								<div
+									class="bg-white/25 backdrop-blur-lg rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border border-white/20"
+								>
+									<div
+										class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1"
+									>
+										4
+									</div>
+									<div
+										class="text-xs sm:text-sm text-white/90 font-medium"
+									>
+										Urbanizaciones
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="flex flex-col justify-center p-6 sm:p-8 lg:p-12 xl:p-16 relative"
+					>
+						<div
+							class="relative min-h-[300px] sm:min-h-[400px] mb-6 sm:mb-8"
+							id="about-slides-container"
+						>
+						</div>
+
+						<div
+							class="flex flex-col items-center space-y-4 sm:space-y-6 mt-6 sm:mt-8"
+						>
+							<div
+								class="flex justify-center space-x-3 sm:space-x-4"
+								id="about-slide-indicators"
+							>
+							</div>
+
+							<!-- Progress bar -->
+							<div
+								class="w-full max-w-xs sm:max-w-md bg-gray-200 rounded-full h-2 sm:h-3 overflow-hidden shadow-inner"
+							>
+								<div
+									id="about-progress-bar"
+									class="h-full rounded-full transition-all duration-500 ease-out shadow-lg bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600"
+									style="width: 33%"
+								>
+								</div>
+							</div>
+
+							<div
+								class="flex items-center space-x-4 sm:space-x-6"
+							>
+								<button
+									id="prev-about-slide"
+									class="h-10 w-10 sm:h-14 sm:w-14 text-gray-500  rounded-full hover:text-teal-500 transition-all duration-300 shadow-sm  group flex items-center justify-center"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  viewBox="0 0 32 32"><path fill="currentColor" d="M20.834 8.037L9.64 14.5c-1.43.824-1.43 2.175 0 3l11.194 6.463c1.43.826 2.598.15 2.598-1.5V9.537c0-1.65-1.17-2.326-2.598-1.5"/></svg>
+								</button>
+
+								<div class="text-center">
+									<div
+										class="text-xs sm:text-sm font-medium text-gray-500"
+										id="about-slide-counter"
+									>
+										1 / 3
+									</div>
+									<div
+										class="text-xs text-gray-400 hidden sm:block"
+										id="about-slide-title"
+									>
+										MISIÓN
+									</div>
+								</div>
+
+								<button
+									id="next-about-slide"
+									class="h-10 w-10 sm:h-14 sm:w-14 text-gray-500  rounded-full hover:text-teal-500 transition-all duration-300 shadow-sm  group flex items-center justify-center"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"  viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contacto" class="py-16 sm:py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12 sm:mb-16">
+				<h2
+					class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 sm:mb-6"
+				>
+					CONTACTO
+				</h2>
+				<p
+					class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4"
+				>
+					Estamos aquí para ayudarte. Por favor, completa el
+					formulario a continuación.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+				<!-- Contact form -->
+				<div class="bg-gray-100 rounded-2xl  p-6 sm:p-8">
+					<form id="contact-form" class="space-y-4 sm:space-y-6">
+						<div class="space-y-4">
+							<input
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Nombre"
+								class="bg-white w-full px-4 py-3 h-12 sm:h-14 text-base rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+							/>
+							<input
+								type="tel"
+								name="phone"
+								id="phone"
+								placeholder="Teléfono"
+								class="bg-white w-full px-4 py-3 h-12 sm:h-14 text-base rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+							/>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Correo Electrónico"
+								class="bg-white w-full px-4 py-3 h-12 sm:h-14 text-base rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+							/>
+							<textarea
+								name="message"
+								id="message"
+								placeholder="Mensaje"
+								rows="4"
+								class="bg-white w-full px-4 py-3 text-base rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500 min-h-[120px]"
+							></textarea>
+						</div>
+						<button
+							type="submit"
+							class="w-full sm:w-auto flex gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg tracking-wide cursor-pointer  transition-all duration-300"
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 20v-6l8-2l-8-2V4l19 8z"/></svg>
+							Enviar
+						</button>
+					</form>
+				</div>
+
+				<!-- Contact information -->
+				<div class="bg-slate-800 rounded-lg  p-6 sm:p-8">
+					<div class="space-y-6 sm:space-y-8">
+						<div class="flex items-center gap-4">
+							<MapComponent client:load/>
+						</div>
+						<div class="flex items-center gap-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-green-500" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+							<div class="space-y-1 sm:space-y-2">
+								<h3
+									class="text-xl sm:text-2xl lg:text-3xl font-bold text-white"
+								>
+									Teléfono
+								</h3>
+								<p class="text-gray-400 text-base sm:text-lg">
+									+59170516064 - +59173746955
+								</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-4">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-amber-500" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M16.272 10.272a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0"/><path d="M5.794 16.518a9 9 0 1 1 12.724-.312l-6.206 6.518zm11.276-1.691l-4.827 5.07l-5.07-4.827a7 7 0 1 1 9.897-.243"/></g></svg>
+							<div class="space-y-1 sm:space-y-2">
+								<h3
+									class="text-xl sm:text-2xl lg:text-3xl font-bold text-white"
+								>
+									Ubicación
+								</h3>
+								<p class="text-gray-400 text-base sm:text-lg">
+									Camino Laja, Cruce Sante Fe #2864
+								</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-slate-800 text-white py-12 sm:py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="col-span-1 sm:col-span-2 lg:col-span-2">
+					<div class="flex items-center space-x-3 mb-4 sm:mb-6">
+						<Image src={logoCanaanWhite} alt="Canaan Inmobiliaria" 
+							class="w-20 "/>
+					</div>
+					<p
+						class="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base"
+					>
+						LÍDERES EN CALIDAD DE <strong class="text-amber-500">CONSTRUCCIÓN</strong>
+					</p>
+					<div class="flex space-x-3 sm:space-x-4">
+						<div
+							class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-500 text-slate-800 hover:text-slate-950 cursor-pointer rounded-full flex items-center justify-center"
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="24" stroke-dashoffset="24" d="M17 4l-2 0c-2.5 0 -4 1.5 -4 4v12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M8 12h7"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="8;0"/></path></g></svg>
+						</div>
+						<div
+							class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-500  text-slate-800 hover:text-slate-950 cursor-pointer rounded-full flex items-center justify-center"
+						>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+						</div>
+						<div
+							class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-500  text-slate-800 hover:text-slate-950 cursor-pointer rounded-full flex items-center justify-center"
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4" cy="4" r="2" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="12" stroke-dashoffset="12" d="M4 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="12" stroke-dashoffset="12" d="M10 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.45s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.65s" dur="0.2s" values="24;0"/></path></g></svg>
+						</div>
+						<div
+							class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-500  text-slate-800 hover:text-slate-950 cursor-pointer rounded-full flex items-center justify-center"
+						>
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><g fill="none"><g clip-path="url(#SVGG1Ot4cAD)"><path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"/></g><defs><clipPath id="SVGG1Ot4cAD"><path fill="#fff" d="M0 0h14v14H0z"/></clipPath></defs></g></svg>
+						</div>
+						<div
+							class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-500  text-slate-800 hover:text-slate-950 cursor-pointer rounded-full flex items-center justify-center"
+						>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="1.3s" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="72" stroke-dashoffset="72" d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="72;0"/></path><path stroke-dasharray="28" stroke-dashoffset="28" d="M12 8c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.6s" values="28;0"/></path></g></svg>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h3
+						class="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-amber-400"
+					>
+						Servicios
+					</h3>
+					<ul
+						class="space-y-2 sm:space-y-3 text-gray-300 text-sm sm:text-base"
+					>
+						<li>
+							<a
+								href="#servicios"
+								class="hover:text-amber-400 transition-colors"
+							>
+								Venta de Lotes
+							</a>
+						</li>
+						<li>
+							<a
+								href="#servicios"
+								class="hover:text-amber-400 transition-colors"
+							>
+								Consultoría
+							</a>
+						</li>
+						<li>
+							<a
+								href="#servicios"
+								class="hover:text-amber-400 transition-colors"
+							>
+								Importaciones
+							</a>
+						</li>
+						<li>
+							<a
+								href="#servicios"
+								class="hover:text-amber-400 transition-colors"
+							>
+								Red CORS
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<h3
+						class="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-amber-400"
+					>
+						Contacto
+					</h3>
+					<div
+						class="space-y-2 sm:space-y-3 text-gray-300 text-sm sm:text-base"
+					>
+						<div class="flex items-center space-x-3">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-green-500" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+							<span>+59170516064 - +59173746955</span>
+						</div>
+						<div class="flex items-center space-x-3">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-amber-500" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M16.272 10.272a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0"/><path d="M5.794 16.518a9 9 0 1 1 12.724-.312l-6.206 6.518zm11.276-1.691l-4.827 5.07l-5.07-4.827a7 7 0 1 1 9.897-.243"/></g></svg>
+							<span>Camino Laja, Cruce Sante Fe #2864</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center"
+			>
+				<p class="text-gray-400 text-sm sm:text-base">
+					© 2025 Canaan Inmobiliaria. Todos los derechos reservados.
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script
+		is:inline
+		src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+	></script>
+	 <script>
+        // Datos para las diapositivas
+        const aboutSlides = [
+            {
+                id: "mision",
+                title: "MISIÓN",
+                icon: "📜",
+                color: "teal",
+                content: "Brindar soluciones integrales en bienes raíces, construcción, consultoría, importación y servicios tecnológicos, ofreciendo productos y proyectos de alta calidad que satisfagan las necesidades de nuestros clientes, impulsando el desarrollo sostenible y generando valor en cada etapa de nuestros servicios.",
+            },
+            {
+                id: "vision",
+                title: "VISIÓN",
+                icon: "🌎",
+                color: "amber",
+                content: "Ser una empresa líder y referente a nivel nacional e internacional, reconocida por la innovación, la excelencia en la ejecución y la confianza que brindamos en los sectores inmobiliario, de construcción, comercio e infraestructura tecnológica, contribuyendo al crecimiento económico y social de las comunidades donde operamos.",
+            },
+            {
+                id: "valores",
+                title: "VALORES",
+                icon: "💡",
+                color: "teal",
+                content: "",
+                values: ["Integridad", "Calidad", "Innovación", "Compromiso", "Sostenibilidad", "Confianza", "Adaptabilidad"],
+            },
+        ];
+
+        // Estado del slider
+        let currentAboutSlide = 0;
+        let aboutSlideInterval;
+
+        // Inicializar el slider cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar iconos de Lucide
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Inicializar slides
+            initAboutSlides();
+            
+            // Configurar event listeners
+            setupEventListeners();
+            
+            // Iniciar transición automática de slides
+            startAboutSlideInterval();
+        });
+
+        // Inicializar slides
+        function initAboutSlides() {
+            const aboutContainer = document.getElementById('about-slides-container');
+            const indicatorsContainer = document.getElementById('about-slide-indicators');
+            
+            aboutContainer.innerHTML = '';
+            indicatorsContainer.innerHTML = '';
+            
+            aboutSlides.forEach((slide, index) => {
+                // Crear contenido del slide
+                const slideDiv = document.createElement('div');
+                slideDiv.className = `transition-all duration-700 ease-in-out ${index === currentAboutSlide ? 'opacity-100 transform translate-x-0 relative' : 'opacity-0 transform translate-x-8 absolute inset-0 pointer-events-none'}`;
+                
+                slideDiv.innerHTML = `
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-6 sm:mb-8">
+                        <div class="text-3xl sm:text-4xl lg:text-5xl p-3 sm:p-4 rounded-2xl shadow-sm ${slide.color === "teal" ? "bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200" : "bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200"}">
+                            ${slide.icon}
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-center sm:text-left ${slide.color === "teal" ? "text-teal-700" : "text-amber-700"}">
+                            ${slide.title}
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 font-light text-left">
+                        ${slide.content}
+                    </p>
+                    ${slide.values ? `
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                            ${slide.values.map(value => `
+                                <div class="flex items-center space-x-3 sm:space-x-4 group p-2 sm:p-3 rounded-xl hover:bg-teal-50 transition-all duration-300">
+                                    <div class="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full group-hover:scale-125 transition-transform duration-300 shadow-lg flex-shrink-0"></div>
+                                    <span class="text-gray-700 font-medium group-hover:text-teal-700 transition-colors duration-300 text-sm sm:text-base">
+                                        ${value}
+                                    </span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+                
+                aboutContainer.appendChild(slideDiv);
+                
+                // Crear indicador
+                const indicatorButton = document.createElement('button');
+                indicatorButton.className = `relative transition-all duration-300 group ${index === currentAboutSlide ? 'w-12 sm:w-16 h-4 sm:h-5' : 'w-4 sm:w-5 h-4 sm:h-5 hover:w-6 sm:hover:w-8'}`;
+                indicatorButton.addEventListener('click', () => setCurrentAboutSlide(index));
+                
+                indicatorButton.innerHTML = `
+                    <div class="w-full h-full rounded-full transition-all duration-300 ${index === currentAboutSlide ? 
+                        (slide.color === "teal" ? "bg-gradient-to-r from-teal-400 to-teal-600 shadow-xl shadow-teal-500/40" : "bg-amber-500 shadow-xl shadow-amber-500/40") : 
+                        "bg-gray-300 hover:bg-gray-400 group-hover:shadow-lg"}"></div>
+                    <div class="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-xs font-medium text-gray-600 whitespace-nowrap bg-white px-2 py-1 rounded-md shadow-lg">${slide.title}</span>
+                    </div>
+                `;
+                
+                indicatorsContainer.appendChild(indicatorButton);
+            });
+            
+            updateAboutSlideCounter();
+        }
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            // Navegación de slides
+            document.getElementById('prev-about-slide').addEventListener('click', prevAboutSlide);
+            document.getElementById('next-about-slide').addEventListener('click', nextAboutSlide);
+        }
+
+        // Funciones de slides
+        function setCurrentAboutSlide(index) {
+            currentAboutSlide = index;
+            updateAboutSlideContent();
+            resetAboutSlideInterval();
+        }
+
+        function nextAboutSlide() {
+            setCurrentAboutSlide((currentAboutSlide + 1) % aboutSlides.length);
+        }
+
+        function prevAboutSlide() {
+            setCurrentAboutSlide((currentAboutSlide - 1 + aboutSlides.length) % aboutSlides.length);
+        }
+
+        function updateAboutSlideContent() {
+            const slides = document.querySelectorAll('#about-slides-container > div');
+            const indicators = document.querySelectorAll('#about-slide-indicators button');
+            
+            slides.forEach((slide, index) => {
+                slide.className = `transition-all duration-700 ease-in-out ${index === currentAboutSlide ? 'opacity-100 transform translate-x-0 relative' : 'opacity-0 transform translate-x-8 absolute inset-0 pointer-events-none'}`;
+            });
+            
+            indicators.forEach((indicator, index) => {
+                const slide = aboutSlides[index];
+                const innerDiv = indicator.querySelector('div:first-child');
+                innerDiv.className = `w-full h-full rounded-full transition-all duration-300 ${index === currentAboutSlide ? 
+                    (slide.color === "teal" ? "bg-gradient-to-r from-teal-400 to-teal-600 shadow-xl shadow-teal-500/40" : "bg-amber-500 shadow-xl shadow-amber-500/40") : 
+                    "bg-gray-300 hover:bg-gray-400 group-hover:shadow-lg"}`;
+                
+                indicator.className = `relative transition-all duration-300 group ${index === currentAboutSlide ? 'w-12 sm:w-16 h-4 sm:h-5' : 'w-4 sm:w-5 h-4 sm:h-5 hover:w-6 sm:hover:w-8'}`;
+            });
+            
+            // Actualizar barra de progreso
+            const progressBar = document.getElementById('about-progress-bar');
+            const progressPercentage = ((currentAboutSlide + 1) / aboutSlides.length) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+            
+            // Actualizar color según el slide actual
+            const currentSlideData = aboutSlides[currentAboutSlide];
+            if (currentSlideData.color === 'teal') {
+                progressBar.className = 'h-full rounded-full transition-all duration-500 ease-out shadow-lg bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600';
+            } else {
+                progressBar.className = 'h-full rounded-full transition-all duration-500 ease-out shadow-lg bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600';
+            }
+            
+            updateAboutSlideCounter();
+        }
+
+        function updateAboutSlideCounter() {
+            document.getElementById('about-slide-counter').textContent = `${currentAboutSlide + 1} / ${aboutSlides.length}`;
+            document.getElementById('about-slide-title').textContent = aboutSlides[currentAboutSlide].title;
+        }
+
+        function startAboutSlideInterval() {
+            aboutSlideInterval = setInterval(() => {
+                nextAboutSlide();
+            }, 8000);
+        }
+
+        function resetAboutSlideInterval() {
+            clearInterval(aboutSlideInterval);
+            startAboutSlideInterval();
+        }
+    </script>
+</html>
