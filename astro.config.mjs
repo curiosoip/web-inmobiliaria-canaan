@@ -9,12 +9,10 @@ import vue from '@astrojs/vue';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-     optimizeDeps: {
-      exclude: ['sharp', '@astrojs/image'],
-    },
   },
+
+  integrations: [vue()],
   image: {
     service: passthroughImageService(),
   },
-  integrations: [vue()]
 });
