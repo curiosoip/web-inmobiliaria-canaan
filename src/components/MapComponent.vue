@@ -27,7 +27,7 @@ onMounted(async () => {
 
 <template>
   <div class="flex gap-2 justify-center items-center w-full h-64 rounded-lg shadow-lg">
-    <div ref="mapContainer" class="w-full h-full"></div>
+    <div ref="mapContainer" class="w-full h-full z-20"></div>
     <a
       href="https://www.openstreetmap.org/?mlat=-16.5&mlon=-68.15#map=13/-16.5000/-68.1500"
       target="_blank"
