@@ -1,0 +1,13 @@
+---
+import type { ButtonInterface } from "../interfaces/ButtonInterface"
+import Icon from "../tokens/Icon.astro"
+
+const {active,text,iconLeft,iconRight,stylesClass,type}= Astro.props as ButtonInterface
+---
+{active&&
+<button class={stylesClass} type={type}>
+    <Icon active={iconLeft?.active} name={iconLeft?.name} fileIconsName="WebIcons" stylesClass={iconLeft?.stylesClass}/>
+    {text}
+    <Icon active={iconRight?.active} name={iconRight?.name} fileIconsName="WebIcons" stylesClass={iconRight?.stylesClass}/> 
+</button>
+}

@@ -1,0 +1,287 @@
+---
+import { Image } from "astro:assets";
+import imglotes from "../assets/imgs/12.jpg"
+import imgconsultoria from "../assets/imgs/15.jpg"
+import imgimportacion from "../assets/imgs/16.jpg"
+import imgredcors from "../assets/imgs/17.jpg"
+
+---
+<section id="servicios" class="py-16 sm:py-20 lg:py-28 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12 sm:mb-16 lg:mb-20">
+				<h2
+					class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight"
+				>
+					SERVICIOS
+				</h2>
+				<p
+					class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4"
+				>
+					Ofrecemos soluciones integrales en construcción, bienes
+					raíces y tecnología avanzada
+				</p>
+			</div>
+
+			<div
+				class="grid grid-cols-1 lg:grid-cols-2 gap-8"
+			>
+				<!-- Venta de Lotes -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-start gap-4 justify-center "
+					>
+						<article class="flex w-full flex-col justify-start items-center gap-3">
+								<div
+									class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-amber-50 to-amber-100 border-2 border-amber-200 rounded-xl overflow-hidden group-hover:border-amber-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-amber-500/20"
+								>
+									<div
+										class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+									>
+									</div>
+									<Image 
+                                    src={imglotes} 
+                                    alt="Venta de Lotes" 
+                                    loading="lazy" 
+                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                                    />
+
+									<div class="absolute bottom-4 flex flex-col gap-1 left-4 right-4">
+										<div
+											class="bg-white/90 backdrop-blur-sm flex justify-start items-center gap-2   rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-amber-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+											<p
+												class="text-sm font-medium text-slate-700"
+											>
+												Lotes residenciales premium
+											</p>
+										</div>
+										<div
+											class="bg-white/90 backdrop-blur-sm flex justify-start items-center gap-2   rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-amber-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+											<p
+												class="text-sm font-medium text-slate-700"
+											>
+												Créditos accesibles
+											</p>
+										</div>
+									</div>
+								</div>
+								<div
+											class="bg-amber-500  flex w-full justify-center items-center text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+										>
+											VENTA DE LOTES
+										</div>
+								<p
+									class="text-gray-600  text-sm flex w-full justify-start "
+								>
+									Terrenos residenciales en las mejores
+									ubicaciones de Bolivia con servicios básicos
+									garantizados
+								</p>
+								
+						</article>	
+					
+
+						
+					</div>
+				</div>
+
+				<!-- Consultoría Constructiva -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+					>
+						<article class="flex w-full flex-col justify-start items-center gap-3">
+							<div
+							class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-200 rounded-xl overflow-hidden group-hover:border-teal-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-teal-500/20"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+							</div>
+							<Image src={imgconsultoria} alt="Consultoría Constructiva" loading="lazy"
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+	
+							<div class="absolute bottom-4 flex flex-col gap-1 left-4 right-4">
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-teal-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Ingeniería civil y arquitectura
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1  transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-teal-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Topografía y geodesia geométrica
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-teal-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Gestión y supervisión de construcción
+									</p>
+								</div>
+								
+							</div>
+						</div>
+						<div
+									class="bg-gradient-to-r  from-teal-500 to-teal-600 flex w-full justify-center items-center text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+								>
+									CONSULTORÍA CONSTRUCTIVA
+								</div>
+								<p
+									class="text-gray-600  text-sm flex w-full justify-start "
+								>
+									  Asesoramiento especializado en proyectos de construcción, planificación y optimización de recursos para obras seguras y eficientes en Bolivia
+
+								</p>
+
+						</article>
+						
+
+						
+					</div>
+				</div>
+
+				<!-- Importaciones -->
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+					>
+					<article class="flex w-full flex-col justify-start items-center gap-3">
+						<div
+							class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-slate-50 to-slate-100 border-2 border-slate-200 rounded-xl overflow-hidden group-hover:border-slate-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-slate-500/20"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+							</div>
+							<Image src={imgimportacion} alt="Importaciones"  loading="lazy"
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+							
+							<div class="absolute flex flex-col gap-1 bottom-4 left-4 right-4">
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-slate-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Equipos y tecnología especializada
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+									class="bg-slate-500 text-white px-6 flex w-full justify-center items-center sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+								>
+									IMPORTACIONES
+								</div>
+								<p
+									class="text-gray-600  text-sm sm:text-base"
+								>
+									Equipos especializados y tecnología de
+									vanguardia para proyectos de construcción e
+									infraestructura
+								</p>
+
+					</article>
+						
+
+					</div>
+				</div>
+
+				<div class="group">
+					<div
+						class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8"
+					>
+						<article class="flex w-full flex-col justify-start items-center gap-3">
+							<div
+							class="relative w-full lg:w-80 h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-xl overflow-hidden group-hover:border-blue-400 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue-500/20"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+							</div>
+							<Image src={imgredcors} alt="Red CORS"  loading="lazy"
+									class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"/>
+									
+						
+							<div class="absolute flex flex-col gap-1 bottom-4 left-4 right-4">
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-blue-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Red CORS - NTRIP
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-blue-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Correcciones GPS en tiempo real
+									</p>
+								</div>
+								<div
+									class="bg-white/90 flex gap-2 justify-start items-center backdrop-blur-sm rounded-lg px-3 py-1 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="text-blue-500" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+
+									<p
+										class="text-sm font-medium text-slate-700"
+									>
+										Precisión centimétrica garantizada
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+									class="bg-gradient-to-r from-blue-500 to-blue-600 flex w-full justify-center items-center text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg tracking-wide shadow-lg"
+								>
+									RED CORS
+								</div>
+								<p
+									class="text-gray-600  text-sm sm:text-base"
+								>
+									  Acceso a correcciones GPS en tiempo real para posicionamiento preciso y confiable en cualquier ubicación
+
+								</p>
+
+						</article>
+						
+						</div>
+					
+				</div>
+			</div>
+
+			
+		</div>
+	</section>

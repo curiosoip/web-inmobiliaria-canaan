@@ -1,0 +1,11 @@
+---
+const { active,text,icon,stylesClass } = Astro.props as BadgeInterface
+import type { BadgeInterface } from "../interfaces/BadgeInterface"
+import Icon from "../tokens/Icon.astro"
+---
+{ active&&
+    <span class={stylesClass}>
+        <Icon active={icon?.active} name={icon?.name} fileIconsName="WebIcons" stylesClass={stylesClass}/>
+        {text}
+    </span>
+}

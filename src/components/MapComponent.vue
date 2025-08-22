@@ -5,7 +5,6 @@ let L: typeof import('leaflet'); // solo importaremos dinámicamente
 const mapContainer = ref<HTMLDivElement | null>(null);
 
 onMounted(async () => {
-  // Import dinámico de Leaflet solo en cliente
   L = (await import('leaflet')).default;
   await import('leaflet/dist/leaflet.css');
 

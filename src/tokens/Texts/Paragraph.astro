@@ -1,0 +1,6 @@
+---
+import type { TextInterface } from "../../interfaces/TextInterface"
+
+const {active,text,stylesClass} = Astro.props as TextInterface
+---
+{active&&<p class={stylesClass}>{text}</p>}

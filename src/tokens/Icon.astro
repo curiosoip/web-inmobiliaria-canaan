@@ -1,0 +1,8 @@
+---
+import type { IconInterface } from "../interfaces/IconInterface";
+const {active,name,size=24,stylesClass,fileIconsName="WebIcons"}=Astro.props as IconInterface
+import {IconsMap} from "../utils/IconsMap.ts";
+const IconSet = IconsMap[fileIconsName] || IconsMap.WebIcons;
+---
+{active&&<span  class={stylesClass} set:html={IconSet(size)[name] }></span>}
+
