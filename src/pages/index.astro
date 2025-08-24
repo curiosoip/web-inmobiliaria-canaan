@@ -1,16 +1,18 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import NavbarComponent from "../components/NavbarComponent.astro"
-import HeroSection from "../sections/HeroSection.astro"
+import HeroSection from "../sections/HeroSection.vue"
 import ServicesSection from "../sections/ServicesSection.astro"
 import BudgetSection from "../sections/BudgetSection.astro"
 import AboutSection from "../sections/AboutSection.astro"
 import ContactSection from "../sections/ContactSection.astro"
 import FooterSection from "../sections/FooterSection.astro"
+import SliderComponent from "../components/SliderComponent.astro"
 ---
 <MainLayout>
 	<NavbarComponent/>
-	<HeroSection/>
+	<HeroSection client:load/>
+	<SliderComponent/>
 	<ServicesSection/>
 	<BudgetSection/>
 	<AboutSection/>

@@ -25,13 +25,13 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex gap-2 justify-center items-center w-full h-64 rounded-lg shadow-lg">
+  <div class="flex gap-2 justify-center items-center w-full h-64 rounded-lg ">
     <div ref="mapContainer" class="w-full h-full z-20"></div>
     <a
       href="https://www.openstreetmap.org/?mlat=-16.5&mlon=-68.15#map=13/-16.5000/-68.1500"
       target="_blank"
       rel="noopener noreferrer"
-      class=" text-white hover:text-amber-500"
+      class=" text-amber-500 hover:text-amber-700"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
         <path d="M5.536 21.886a1 1 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886"/>

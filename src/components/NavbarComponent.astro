@@ -5,11 +5,11 @@ import logoCanaan from "../assets/logo.svg";
 ---
 
 <nav
-    class="bg-slate-800 border-b border-amber-500 sticky w-full z-80 top-0 start-0"
+    class="bg-emerald-700 border-b border-emerald-300/20 sticky w-full z-80 top-0 start-0"
 >
     <div class="flex flex-wrap items-center justify-between mx-auto">
         <div
-            class="px-4 lg:px-6 py-3 md:py-3 flex items-center justify-center md:justify-start"
+            class="px-4 lg:px-6 py-3 bg-slate-800 md:py-3 flex items-center justify-center md:justify-start"
         >
             <div class="flex items-center space-x-3">
                 <Image
@@ -26,8 +26,11 @@ import logoCanaan from "../assets/logo.svg";
         >
             <button
                 type="button"
-                class="text-amber-300 cursor-pointer border-2 border-amber-300 hover:text-amber-400 font-medium rounded-lg text-sm px-4 py-2 text-center"
-                >Ingresar</button
+                class="text-slate-800 flex gap-2 justify-center items-center  bg-yellow-500 cursor-pointer border-2 border-yellow-600 hover:text-slate-950 font-medium rounded-lg text-lg px-4 py-2 text-center"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 11h8V3H3zm2-6h4v4H5zM3 21h8v-8H3zm2-6h4v4H5zm8-12v8h8V3zm6 6h-4V5h4zm-5.99 4h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm4 0h2v2h-2zm2 2h2v2h-2zm-4 0h2v2h-2zm2-6h2v2h-2zm2 2h2v2h-2z"/></svg>
+                Pagar
+            </button
             >
             <button
                 data-collapse-toggle="navbar-sticky"
@@ -54,7 +57,7 @@ import logoCanaan from "../assets/logo.svg";
             </button>
         </div>
         <div
-            class="items-center justify-between hidden bg-slate-900 px-4 py-3 rounded-md w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between hidden bg-emerald-600 px-4 py-3 rounded-md w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
         >
             <ul

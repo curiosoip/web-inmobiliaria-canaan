@@ -1,6 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import sobrenosotros00 from "../assets/imgs/00.jpg";
+import misionimg from "../assets/imgs/08.jpg";
+import visionimg from "../assets/imgs/02.jpg";
+
+import ValoresComponent from "../components/ValoresComponent.vue";
+
 ---
 <section id="nosotros" class="py-16 sm:py-20 bg-gray-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +38,7 @@ import sobrenosotros00 from "../assets/imgs/00.jpg";
                                 <div
                                     class="bg-amber-500 flex w-full h-full min-h-[60px] lg:min-h-[120px] flex-col justify-center items-center rounded-xl sm:rounded-2xl p-2 sm:p-6 text-center border border-white/20"
                                 >
-                                    <div class="text-4xl font-bold text-slate-800">500+</div>
+                                    <div class="text-4xl font-bold text-slate-800">300+</div>
                                     <div class="text-xs sm:text-sm text-slate-800 font-bold">
                                     Clientes Satisfechos
                                     </div>
@@ -51,9 +56,11 @@ import sobrenosotros00 from "../assets/imgs/00.jpg";
                                 <div
                                     class="bg-amber-500 flex w-full h-full min-h-[60px] lg:min-h-[120px] flex-col justify-center items-center rounded-xl sm:rounded-2xl p-2 sm:p-6 text-center border border-white/20"
                                 >
-                                    <div class="text-4xl font-bold text-slate-800">4</div>
+                                    <div class="text-4xl font-bold text-slate-800">
+                                        30+
+                                    </div>
                                     <div class="text-xs sm:text-sm text-slate-800 font-bold">
-                                    Urbanizaciones
+                                    Profesionales Expertos
                                     </div>
                                 </div>
                                 </div>
@@ -103,78 +110,27 @@ import sobrenosotros00 from "../assets/imgs/00.jpg";
                                 <p class="text-lg text-gray-500 dark:text-gray-400">
                                     Brindar soluciones integrales en bienes raíces, construcción, consultoría, importación y servicios tecnológicos, ofreciendo productos y proyectos de alta calidad que satisfagan las necesidades de nuestros clientes, impulsando el desarrollo sostenible y generando valor en cada etapa de nuestros servicios.
                                 </p>
+                                <Image 
+                                    src={misionimg} 
+                                    alt="Canaan Inmobiliaria" 
+                                    class="w-full h-40 rounded-lg mt-2  object-cover object-center "
+                                />
                             </div>
                             <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                                 <p class="text-lg text-gray-500 dark:text-gray-400">
                                     Ser una empresa líder y referente a nivel nacional e internacional, reconocida por la innovación, la excelencia en la ejecución y la confianza que brindamos en los sectores inmobiliario, de construcción, comercio e infraestructura tecnológica, contribuyendo al crecimiento económico y social de las comunidades donde operamos.
                                 </p>
+                                 <div class="flex mt-2 w-full justify-center items-center bg-cover p-2">
+                                 <Image 
+                                    src={visionimg} 
+                                    alt="Canaan Inmobiliaria" 
+                                    class="w-full h-34 rounded-lg mt-2  object-cover object-center "
+                                />
+                                </div>
                             </div>
                             <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
-                                    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center items-start">
-                                        <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Integridad
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Actuamos con transparencia, ética y responsabilidad en cada proyecto y transacción.
-                                            </p>
-                                        </li>
-                                         <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Calidad
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Garantizamos altos estándares en productos, servicios y procesos.
-                                            </p>
-                                        </li>
-                                        <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Innovación
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Buscamos soluciones creativas y tecnológicas para mejorar continuamente.
-                                            </p>
-                                        </li>
-                                        <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Compromiso
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Cumplimos con nuestros clientes, socios y comunidad.
-                                            </p>
-                                        </li>
-                                         <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Sostenibilidad
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Promovemos prácticas responsables que cuiden el medio ambiente y fomenten el desarrollo social.
-                                            </p>
-                                        </li>
-                                        <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Confianza
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Construimos relaciones sólidas y duraderas basadas en el respeto mutuo.
-                                            </p>
-                                        </li>
-                                        <li class="flex flex-col justify-center items-start">
-                                            <h3 class="text-teal-500 font-bold flex gap-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-                                                Adaptabilidad
-                                            </h3>
-                                            <p class="text-gray-500 text-xs">
-                                                Respondemos de manera ágil a las necesidades cambiantes del mercado y de nuestros clientes.
-                                            </p>
-                                        </li>
-                                    </ul>
+                                    <ValoresComponent client:load/>
+                                
                             </div>
                         </div>
 
