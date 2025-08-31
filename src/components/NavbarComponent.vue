@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue"
-
+import logo from "../assets/logo.svg";
 const activeSection = ref("inicio")
 const isMenuOpen = ref(false)
 
@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
 
             <a href="/" class="px-4 lg:px-6 py-3 bg-slate-800 md:py-3 flex items-center justify-center md:justify-start">
                 <div class="flex items-center space-x-3">
-                    <img src="src/assets/logo.svg" alt="Canaan Inmobiliaria" class="w-20" />
+                    <img :src="logo.src" alt="Canaan Inmobiliaria" class="w-20" />
                 </div>
             </a>
 
