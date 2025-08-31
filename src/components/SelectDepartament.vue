@@ -57,7 +57,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-const selectedCity = ref("lapaz");
+const selectedCity = ref("");
 
 onMounted(() => {
   const pathCity = window.location.pathname.split("/").pop();
