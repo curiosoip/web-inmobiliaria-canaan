@@ -341,11 +341,11 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import misionimg from "../assets/imgs/08.jpg"
-import visionimg from "../assets/imgs/02.jpg"
-import mision from "../assets/imgs/mision.jpg"
-import vision from "../assets/imgs/vision.jpg"
-import valores from "../assets/imgs/valores.jpg"
+import misionimg from "/src/assets/imgs/08.jpg"
+import visionimg from "/src/assets/imgs/02.jpg"
+import mision from "/src/assets/imgs/mision.jpg"
+import vision from "/src/assets/imgs/vision.jpg"
+import valores from "/src/assets/imgs/valores.jpg"
 import ValoresComponent from "../components/ValoresComponent.vue"
 
 const slideImages = [mision, vision, valores]

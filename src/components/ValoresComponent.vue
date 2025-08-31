@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref,computed } from 'vue';
-import integridad from "../assets/imgs/integridad.jpg"
-import calidad from "../assets/imgs/calidad.jpg"
-import innovacion from "../assets/imgs/innovacion.jpg"
-import compromiso from "../assets/imgs/compromiso.jpg"
-import sostenible from "../assets/imgs/sostenible.jpg"
-import confianza from "../assets/imgs/confianza.jpg"
-import adaptable from "../assets/imgs/adaptable.jpg"
+import integridad from "../assets/imgs/integridad.jpg";
+import calidad from "../assets/imgs/calidad.jpg";
+import innovacion from "../assets/imgs/innovacion.jpg";
+import compromiso from "../assets/imgs/compromiso.jpg";
+import sostenible from "../assets/imgs/sostenible.jpg";
+import confianza from "../assets/imgs/confianza.jpg";
+import adaptable from "../assets/imgs/adaptable.jpg";
 
 const tabs = [
   { 
