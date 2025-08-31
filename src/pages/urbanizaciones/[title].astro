@@ -1,9 +1,13 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import FooterSection from "../../sections/FooterSection.astro";
-import SelectDepartament from "../../components/SelectDepartament.vue";
+import SelectDepartament from "../../components/SelectDepartament.astro";
 import logo from "../../assets/logo.svg";
 import UrbanizacionesSection from '../../sections/UrbanizacionesSection.astro';
+
+import lapazbg from "../../assets/imgs/lapazbg.jpg";
+import cochabambabg from "../../assets/imgs/cochabambabg.jpg";
+import santacruzbg from "../../assets/imgs/santacruzbg.jpg";
 
 export function getStaticPaths() {
   return [
@@ -85,7 +89,7 @@ const { title } = Astro.params;
           loop
           playsinline
           class="absolute inset-0 w-full h-screen object-cover"
-          poster="/src/assets/imgs/lapazbg.jpg"
+          poster={lapazbg.src}
         >
           <source src="https://bucket.fabcode.dev/vidlapaz.webm" type="video/webm" />
           Tu navegador no soporta video en HTML5.
@@ -97,7 +101,7 @@ const { title } = Astro.params;
           loop
           playsinline
           class="absolute inset-0 w-full h-screen object-cover"
-          poster="/src/assets/imgs/cochabambabg.jpg"
+          poster={cochabambabg.src}
         >
           <source src="https://bucket.fabcode.dev/vidcochabamba.webm" type="video/webm" />
           Tu navegador no soporta video en HTML5.
@@ -108,7 +112,7 @@ const { title } = Astro.params;
           loop
           playsinline
           class="absolute inset-0 w-full h-screen object-cover"
-          poster="/src/assets/imgs/santacruzbg.jpg"
+          poster={santacruzbg.src}
         >
           <source src="https://bucket.fabcode.dev/vidsantacruz.webm" type="video/webm" />
           Tu navegador no soporta video en HTML5.
