@@ -10,6 +10,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [vue()],
+  redirects: {
+    '/urbanizaciones': '/urbanizaciones/lapaz',
+  },
 });

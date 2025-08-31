@@ -1,0 +1,18 @@
+---
+import UrbanizacionesLayout from './index.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {title: 'lapaz'}},
+    {params: {title: 'cochabamba'}},
+    {params: {title: 'santacruz'}},
+  ];
+}
+
+const { title } = Astro.params;
+import UrbanizacionesSection from '../../sections/UrbanizacionesSection.astro';
+
+---
+<UrbanizacionesLayout>
+  <UrbanizacionesSection/>
+</UrbanizacionesLayout>

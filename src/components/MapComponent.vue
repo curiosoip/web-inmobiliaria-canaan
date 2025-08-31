@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-let L: typeof import('leaflet'); // solo importaremos dinámicamente
+import type * as Leaflet from "leaflet"; 
+
+let L: typeof Leaflet; 
 
 const mapContainer = ref<HTMLDivElement | null>(null);
+
+
+
 
 onMounted(async () => {
   L = (await import('leaflet')).default;
@@ -12,12 +17,19 @@ onMounted(async () => {
 
   const map = L.map(mapContainer.value).setView([-16.5, -68.15], 13);
 
+  const customIcon = L.icon({
+    iconUrl: new URL("../assets/pin.svg", import.meta.url).toString(), 
+    iconSize: [40, 40],
+    iconAnchor: [20, 40], 
+    popupAnchor: [0, -40], 
+  });
+
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© Inmobiliaria Canaan',
   }).addTo(map);
 
-  L.marker([-16.5, -68.15])
+  L.marker([-16.5, -68.15],{ icon: customIcon })
     .addTo(map)
     .bindPopup('<b>Inmobiliaria</b><br>Canaán')
     .openPopup();
