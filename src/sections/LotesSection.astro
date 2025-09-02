@@ -1,0 +1,32 @@
+---
+import CardLoteComponent from "../components/CardLoteComponent.astro"
+
+import achumanicentral from "../assets/imgs/achumanicentral.jpg";
+import achumaniriverside from "../assets/imgs/achumaniriverside.jpg";
+import achumanialto from "../assets/imgs/achumanialto.jpg";
+
+const {title}=Astro.params
+
+---
+<section class="w-full flex justify-center py-10 px-4">
+  <div class="w-full max-w-6xl grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <CardLoteComponent 
+      img={achumanicentral.src}
+      ciudad={title}
+      titleUrbanizacion="Achumani Central" 
+      descripcion="Ubicado en el corazón de Achumani, con acceso inmediato a colegios, supermercados y transporte público. Lotes desde 300 m² ideales para familias." 
+    />
+    <CardLoteComponent 
+      img={achumaniriverside.src}
+      ciudad={title}
+      titleUrbanizacion="Achumani Riverside" 
+      descripcion="Urbanización moderna junto al río Achumani, con amplias avenidas, áreas verdes y espacios recreativos. Lotes disponibles desde 250 m²." 
+    />
+    <CardLoteComponent 
+      img={achumanialto.src}
+      ciudad={title}
+      titleUrbanizacion="Achumani Alto" 
+      descripcion="Zona elevada con vistas panorámicas únicas de La Paz. Urbanización en crecimiento, lotes desde 200 m² con potencial de plusvalía a futuro." 
+    />
+  </div>
+</section>

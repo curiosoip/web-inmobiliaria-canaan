@@ -1,23 +1,24 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import FooterSection from "../../sections/FooterSection.astro";
-import SelectDepartament from "../../components/SelectDepartament.astro";
-import logo from "../../assets/logo.svg";
-import UrbanizacionesSection from '../../sections/UrbanizacionesSection.astro';
+import MainLayout from "../../../layouts/MainLayout.astro";
+import FooterSection from "../../../sections/FooterSection.astro";
+import SelectDepartament from "../../../components/SelectDepartament.astro";
+import logo from "../../../assets/logo.svg";
+import UrbanizacionesSection from '../../../sections/UrbanizacionesSection.astro';
 
-import lapazbg from "../../assets/imgs/lapazbg.jpg";
-import cochabambabg from "../../assets/imgs/cochabambabg.jpg";
-import santacruzbg from "../../assets/imgs/santacruzbg.jpg";
+import lapazbg from "../../../assets/imgs/lapazbg.jpg";
+import cochabambabg from "../../../assets/imgs/cochabambabg.jpg";
+import santacruzbg from "../../../assets/imgs/santacruzbg.jpg";
 
 export function getStaticPaths() {
   return [
-    { params: { title: 'lapaz' } },
-    { params: { title: 'cochabamba' } },
-    { params: { title: 'santacruz' } }
+    { params: { title: 'lapaz',urbanizacion:''} },
+    { params: { title: 'cochabamba',urbanizacion:''} },
+    { params: { title: 'santacruz',urbanizacion:''} },
   ];
 }
 
-const { title } = Astro.params; 
+const { title, urbanizacion } = Astro.params;
+
 ---
 
 <MainLayout>
@@ -75,12 +76,12 @@ const { title } = Astro.params;
         id="navbar-sticky"
         class="items-center justify-center hidden w-full md:flex md:max-w-sm md:order-1 px-4 py-3 rounded-md transition-all duration-300"
       >
-        <SelectDepartament client:load/>
+        <SelectDepartament active={true} client:load/>
       </div>
     </div>
   </nav>
   <section
-    class="relative flex flex-col w-full justify-center py-10 px-4 items-center overflow-hidden"
+    class="relative flex flex-col w-full justify-center py-2 px-4 border-b-4 border-slate-500/20 items-center overflow-hidden"
   >
     {title=="lapaz"?
         <video
@@ -136,7 +137,7 @@ const { title } = Astro.params;
         >
       </h1>
       <h1 class="text-white/30 font-bold text-5xl mt-5">{title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</h1>
-    
+        
     </div>
   </section>
   <UrbanizacionesSection/>

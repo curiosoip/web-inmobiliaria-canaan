@@ -5,22 +5,27 @@ import achumani from "../assets/imgs/achumani.jpg";
 import irpavi from "../assets/imgs/irpavi.jpg";
 import calacoto from "../assets/imgs/calacoto.jpg";
 
+const {title}=Astro.params
+
 ---
 <section class="w-full flex justify-center py-10 px-4">
   <div class="w-full max-w-6xl grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     <CardComponent 
-      img={achumani.src} 
-      title="Achumani" 
+      img={achumani.src}
+      ciudad={title}
+      titleUrbanizacion="Achumani" 
       descripcion="Zona residencial tranquila, con vistas panorámicas de la ciudad y fácil acceso a servicios. Ideal para viviendas familiares." 
     />
     <CardComponent 
-      img={irpavi.src} 
-      title="Irpavi" 
+      img={irpavi.src}
+      ciudad={title}
+      titleUrbanizacion="Irpavi" 
       descripcion="Urbanización consolidada, segura y bien conectada, con acceso rápido a transporte y comercios cercanos." 
     />
     <CardComponent 
-      img={calacoto.src} 
-      title="Calacoto" 
+      img={calacoto.src}
+      ciudad={title}
+      titleUrbanizacion="Calacoto" 
       descripcion="Área residencial de alto nivel, con infraestructura moderna, espacios verdes y ambiente seguro para vivir." 
     />
   </div>
