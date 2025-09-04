@@ -1,11 +1,15 @@
 ---
+import lost from "../assets/videos/lost.webm";
+import consulting from "../assets/videos/consulting.webm";
+import imports from "../assets/videos/imports.webm";
+import redcors from "../assets/videos/redcors.webm";
 const services = [
   {
     id: 1,
     title: "VENTA DE LOTES",
-	url:"/urbanizaciones/lapaz/",
-    video: "https://bucket.fabcode.dev/lost.webm",
-	poster: "/src/assets/imgs/serv-lotes.jpg",
+	url:"/urbanizaciones/lapaz",
+    video: lost,
+	poster: "/src/assets/imgs/lost.jpg",
     bg: "bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200 group-hover:border-amber-400 group-hover:shadow-amber-500/20",
     btnColor: "bg-amber-500 hover:bg-amber-700",
 	borderStyle:"border-2 border-amber-600/30",
@@ -20,8 +24,8 @@ const services = [
     id: 2,
     title: "CONSULTORÍA CONSTRUCTIVA",
 	url:"/consultoria/",
-    video: "https://bucket.fabcode.dev/consulting.webm",
-	poster: "/src/assets/imgs/serv-consulting.jpg",
+    video: consulting,
+	poster: "/src/assets/imgs/consulting.jpg",
     bg: "bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200 group-hover:border-teal-400 group-hover:shadow-teal-500/20",
     btnColor: "bg-teal-500 hover:bg-teal-700",
 	borderStyle:"border-2 border-teal-600/30",
@@ -41,8 +45,8 @@ const services = [
     id: 3,
     title: "IMPORTACIONES",
 	url:"/importaciones/",
-    video: "https://bucket.fabcode.dev/imports.webm",
-	poster: "/src/assets/imgs/serv-imports.jpg",
+    video: imports,
+	poster: "/src/assets/imgs/imports.jpg",
     bg: "bg-gradient-to-br from-slate-50 to-slate-100 border-slate-200 group-hover:border-slate-400 group-hover:shadow-slate-500/20",
     btnColor: "bg-slate-500 hover:bg-slate-700",
 	borderStyle:"border-2 border-slate-600/30",
@@ -62,8 +66,8 @@ const services = [
     id: 4,
     title: "RED CORS",
 	url:"/redcors/",
-    video: "https://bucket.fabcode.dev/technology.webm",
-	poster: "/src/assets/imgs/serv-redcors.jpg",
+    video: redcors,
+	poster: "/src/assets/imgs/redcors.jpg",
     bg: "bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 group-hover:border-blue-400 group-hover:shadow-blue-500/20",
     btnColor: "bg-blue-500 hover:bg-blue-700",
 	borderStyle:"border-2 border-blue-600/30",
@@ -111,17 +115,9 @@ const services = [
 					>
 					<source src={service.video} type="video/mp4" />
 					</video>
-					<div class={`absolute inset-0 ${service.btnColor} opacity-30`}></div>
 				</div>
 
-				<div class={`absolute  inset-0 flex flex-col justify-center items-center  gap-2 pointer-events-none z-50 transition-transform duration-500 ease-in-out transform group-hover:-translate-y-5 group-hover:flex-row ${service.hoverColor} group-hover:px-4 group-hover:py-1 group-hover:rounded-full`}>
-					<p class={`text-white   text-6xl font-bold group-hover:text-2xl transition-transform duration-500 ease-in-out  `}>
-						{service.id === 1 ? "10+" : service.id === 2 ? "50+" : service.id === 3 ? "120+" : "5+"}
-					</p>
-					<p class="text-white text-sm font-bold group-hover:text-xs transition-transform duration-500 ease-in-out">
-						{service.id === 1 ? "Urbanizaciones" : service.id === 2 ? "Consultorías" : service.id === 3 ? "Importaciones" : "GPS de precisión"}
-					</p>
-				</div>
+				
 
                 <div class="absolute bottom-4 flex flex-col gap-1 left-4 right-4">
                   {service.details.map((detail, i) => (
