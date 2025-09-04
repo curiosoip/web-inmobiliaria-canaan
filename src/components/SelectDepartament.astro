@@ -2,9 +2,9 @@
 const { pathname } = Astro.url;
 
 const urbanizaciones = [
-  { name: "La Paz", href: "/urbanizaciones/lapaz" },
-  { name: "Cochabamba", href: "/urbanizaciones/cochabamba" },
-  { name: "Santa Cruz", href: "/urbanizaciones/santacruz" },
+  { name: "La Paz", href: "/urbanizaciones/lapaz/" },
+  { name: "Cochabamba", href: "/urbanizaciones/cochabamba/" },
+  { name: "Santa Cruz", href: "/urbanizaciones/santacruz/" },
 ];
 
 const activeUrbanizacion = urbanizaciones.find(u => pathname.startsWith(u.href))?.name || "La Paz";
