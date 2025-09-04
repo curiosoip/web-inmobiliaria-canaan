@@ -9,6 +9,10 @@ import lapazbg from "../../../assets/imgs/lapazbg.jpg";
 import cochabambabg from "../../../assets/imgs/cochabambabg.jpg";
 import santacruzbg from "../../../assets/imgs/santacruzbg.jpg";
 
+import vidlapaz from "../../../assets/videos/vidlapaz.webm";
+import vidcochabamba from "../../../assets/videos/vidcochabamba.webm";
+import vidsantacruz from "../../../assets/videos/vidsantacruz.webm";
+
 export function getStaticPaths() {
   return [
     { params: { title: 'lapaz',urbanizacion:''} },
@@ -92,7 +96,7 @@ const { title, urbanizacion } = Astro.params;
           class="absolute inset-0 w-full h-screen object-cover"
           poster={lapazbg.src}
         >
-          <source src="https://bucket.fabcode.dev/vidlapaz.webm" type="video/webm" />
+          <source src={vidlapaz} type="video/webm" />
           Tu navegador no soporta video en HTML5.
         </video>
         :title=="cochabamba"?
@@ -104,7 +108,7 @@ const { title, urbanizacion } = Astro.params;
           class="absolute inset-0 w-full h-screen object-cover"
           poster={cochabambabg.src}
         >
-          <source src="https://bucket.fabcode.dev/vidcochabamba.webm" type="video/webm" />
+          <source src={vidcochabamba} type="video/webm" />
           Tu navegador no soporta video en HTML5.
         </video>:
         <video
@@ -115,13 +119,13 @@ const { title, urbanizacion } = Astro.params;
           class="absolute inset-0 w-full h-screen object-cover"
           poster={santacruzbg.src}
         >
-          <source src="https://bucket.fabcode.dev/vidsantacruz.webm" type="video/webm" />
+          <source src={vidsantacruz} type="video/webm" />
           Tu navegador no soporta video en HTML5.
         </video>
     }
     
 
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/70"></div>
 
     <div
       class="relative z-10 w-full flex flex-col items-center pb-10 pt-5 md:pb-20 md:pt-10"
