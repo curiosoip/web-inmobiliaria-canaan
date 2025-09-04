@@ -7,7 +7,6 @@ const urbanizaciones = [
   { name: "Santa Cruz", href: "/urbanizaciones/santacruz/" },
 ];
 const activeUrbanizacion = urbanizaciones.find(u => pathname.startsWith(u.href))?.name || "La Paz";
-
 const {active}=Astro.props
 
 ---
