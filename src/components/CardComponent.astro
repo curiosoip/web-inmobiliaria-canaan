@@ -1,10 +1,13 @@
 ---
 const { img, ciudad, titleUrbanizacion, descripcion } = Astro.props
 const { title } = Astro.params
+import PlanimetriaMapComponent from "./PlanimetriaMapComponent.vue"
 ---
-<div class="flex relative flex-col w-full max-w-sm mx-4 pb-5 bg-white border border-green-200 rounded-4xl shadow-sm overflow-visible">
+<div class="flex relative flex-col w-full max-w-sm mx-4 pb-5 
+            bg-gradient-to-t from-green-50 via-green-100 to-emerald-800 
+            rounded-4xl shadow-sm overflow-visible">
 
-   <div class="flex items-center justify-center mb-2 relative transform -rotate-2 bg-green-500 px-4  rounded-full">
+   <div class="flex items-center justify-center mb-2 relative transform -rotate-2 bg-green-500 px-4 border-2 border-green-400  rounded-full">
         {ciudad==`lapaz`? <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 -translate-y-2 mr-2 text-amber-500" viewBox="0 0 36 36"><path fill="#292f33" d="M19.083 35.5L12.25 12.292s-1.42.761-2.604 1.637c-.313.231-1.977 2.79-2.312 3.04c-1.762 1.315-3.552 2.841-3.792 3.167C3.083 20.76 0 36 0 36z"/><path fill="#4b545d" d="m32 35l-5.5-19.75L18 4.542l-5.373 4.193l-.971 1.172C11.25 10.688 10 15.25 10 15.25L8.75 20L3.252 30.054L.917 34.791z"/><path fill="#fff" d="M3.252 30.054s7.873-10.783 7.894-11.388C11.167 18.062 10 15.25 10 15.25L8.75 20z"/><path fill="#292f33" d="M12 34h2l2-15.75l1.234-1.797l3.578-5.234l.094-1.469l-3.287 4.454L15 17.752l-2.388 7.362L12 27l-1.791 3.134L8 34zm12.059-17.616l-1.965 5.897L21 26l2.792 7.625l3.552-.062S23 26.625 23 26c0-.12.625-2.687.625-2.687l1.094-4.531L25 17.25z"/><path fill="#f1f1f1" d="m24.059 16.384l-1.778-.665l-1.531.875l-1.328-1.063l-2.188.922l3.578-5.234zm2.871 7.379l-1.711-1.388l-1.594.938l1.094-4.532l1.437 2.282z"/><path fill="#fff" d="M22.094 22.281L21 26l-.25-2.417zM12 27l-1.791 3.134l.353-2.431s.682-.578.938-.911s1.112-1.678 1.112-1.678zm3.208-11l2.411-1.796L15 17.752z"/><path fill="#292f33" d="M36 36s-.384-3.845-.854-7.083c-.369-2.543-2.757-6.303-4.099-7.115l-1.234-3.536l-2.023-5.102l-2.258-2.289l-1.844-1.626l-.505-.621L18 4.542l2.289 5.007l.524 1.67l3.246 5.165l.66 2.397l1.438 2.281l.774 2.701L28 27.5L26 34z"/><path fill="#5c903f" d="M33.708 32.438c-1.345 0-4.958.562-5.458.562c-2 0-4.25-1.75-5.25-1.75S19.406 33 17.406 33c-1.688 0-2.406-.812-4.719-.812c-.748 0-4.096.871-4.812.781C6.052 32.741 5.115 32 4.656 32C2 32 0 36 0 36h36s-.875-3.562-2.292-3.562"/><path fill="#f1f1f1" d="m12.627 8.735l2.123-.485l.656 1.844l2.125-.875l2.758.33L18 2.25z"/><path fill="#a8b6c0" d="m23.183 8.628l-1.443-.243l-1.451 1.164L18 2.25zM27.953 13l1.859 5.266l-1.729-2.828l-1.614-1.625l-.938-2.938zm7.193 15.917S35 25.032 33.875 23.75S31 21.771 31 21.771l1.438 3.271l1.458 1.417z"/></svg>
         
     :ciudad==`cochabamba`?        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 -translate-y-2 mr-2 text-slate-100 " viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12.6 2a2.4 2.4 0 0 1 2.394 2.236L15 4.4v1.186q0 .212-.044.417L15.049 6h3.744c.52 0 .885.275 1.224.603l.337.336a1.5 1.5 0 0 1 .102 2.008l-.102.114l-1.5 1.5a1.5 1.5 0 0 1-.913.432l-.148.007H16v7a1 1 0 0 1 .906.576l.043.108L17.72 21H18a1 1 0 0 1 .117 1.993L18 23H7a1 1 0 0 1-.117-1.993L7 21h.28l.771-2.316a1 1 0 0 1 .833-.677L9 18v-7H7.207a1.5 1.5 0 0 1-.95-.34l-.11-.1l-1.5-1.5a1.5 1.5 0 0 1 0-2.12l.335-.337c.302-.291.624-.541 1.057-.593L6.207 6h3.79l.047.003a2 2 0 0 1-.04-.277L10 5.586V4.4a2.4 2.4 0 0 1 2.236-2.394L12.4 2zm2.68 18H9.72l-.333 1h6.226zM11 14.766V18h3v-1.434zM9.9 8H6.415l1 1H10a1 1 0 0 1 1 1v2.434l3 1.8V10a1 1 0 0 1 1-1h2.586l1-1h-3.487l-2.305.461a1.5 1.5 0 0 1-.588 0zm2.7-4h-.2a.4.4 0 0 0-.392.32L12 4.4v1.186l.5.5l.5-.5V4.4a.4.4 0 0 0-.32-.392z"/></g></svg>
@@ -20,7 +23,7 @@ const { title } = Astro.params
 
 
    <div class="relative lg:[150%] -mx-0 lg:-mx-5 mt-2"> 
-    <img src={img} alt={titleUrbanizacion} class="w-full h-48 object-cover rounded-4xl shadow-md shadow-green-600" />
+    <img src={img} alt={titleUrbanizacion} class="w-full h-48 object-cover rounded-4xl shadow-md shadow-green-900" />
 
   <!-- Badges en las esquinas -->
   <span class="absolute top-2 left-5 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
@@ -61,11 +64,13 @@ const { title } = Astro.params
 
         </footer>
         <!-- Contenedor de badges debajo de la descripción -->
-         <a href={`/urbanizaciones/${ciudad?ciudad:"lapaz"}/${titleUrbanizacion}/lotes`} 
-       class=" text-slate-800 flex gap-2 w-full  justify-center items-center hover:text-slate-900 border border-slate-800 font-medium rounded-xl text-sm px-4 py-2 ">
+         <button type="button"
+    data-modal-target="default-modal"
+    data-modal-toggle="default-modal"
+       class=" text-slate-800 flex gap-2 w-full cursor-pointer justify-center items-center hover:text-slate-900 border border-slate-800 font-medium rounded-xl text-sm px-4 py-2 ">
        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5c.53 0 1.04.13 1.5.35c1.17.57 2 1.78 2 3.15c0 1.54-1.23 3.54-2.23 4.91c-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg> 
        Ver Planimetría
-    </a>
+    </button>
 
         
         
@@ -78,4 +83,49 @@ const { title } = Astro.params
        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5c.53 0 1.04.13 1.5.35c1.17.57 2 1.78 2 3.15c0 1.54-1.23 3.54-2.23 4.91c-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg> 
        Ver lotes disponibles
     </a>
+</div>
+<div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] ">
+    <div class="relative p-4 w-full max-w-5xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                <h3 class="text-sm font-semibold text-gray-600 dark:text-white">
+                    <strong class="text-2xl text-amber-500 font-bold">{title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong> / Planimetría 
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+            <div class="p-4 md:p-5 space-y-4 max-h-[70vh]">
+              <div class="h-[50vh]">
+                <PlanimetriaMapComponent client:load />
+              </div>
+            </div>
+            <div class="flex  justify-between items-center w-full px-4 pt-1 pb-5">
+              <header class="flex gap-2 justify-center items-center">
+                <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">12 Lotes disponibles</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-yellow-900 dark:text-yellow-300">5 Lotes en Crédito</span>
+                <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-red-900 dark:text-red-300">8 Lotes Ocupados</span>
+              </header>
+              <footer>
+
+              </footer>
+            </div>
+
+            <div class="flex w-full justify-between items-center p-4 md:p-5 border-t border-gray-200 rounded-b ">
+                <button data-modal-hide="default-modal" type="button" class="text-white flex gap-2 justify-center items-center  cursor-pointer bg-amber-700 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15"><path fill="currentColor" d="M2.5 6.5V6H2v.5zm4 0V6H6v.5zm0 4H6v.5h.5zm7-7h.5v-.207l-.146-.147zm-3-3l.354-.354L10.707 0H10.5zM2.5 7h1V6h-1zm.5 4V8.5H2V11zm0-2.5v-2H2v2zm.5-.5h-1v1h1zm.5-.5a.5.5 0 0 1-.5.5v1A1.5 1.5 0 0 0 5 7.5zM3.5 7a.5.5 0 0 1 .5.5h1A1.5 1.5 0 0 0 3.5 6zM6 6.5v4h1v-4zm.5 4.5h1v-1h-1zM9 9.5v-2H8v2zM7.5 6h-1v1h1zM9 7.5A1.5 1.5 0 0 0 7.5 6v1a.5.5 0 0 1 .5.5zM7.5 11A1.5 1.5 0 0 0 9 9.5H8a.5.5 0 0 1-.5.5zM10 6v5h1V6zm.5 1H13V6h-2.5zm0 2H12V8h-1.5zM2 5V1.5H1V5zm11-1.5V5h1V3.5zM2.5 1h8V0h-8zm7.646-.146l3 3l.708-.708l-3-3zM2 1.5a.5.5 0 0 1 .5-.5V0A1.5 1.5 0 0 0 1 1.5zM1 12v1.5h1V12zm1.5 3h10v-1h-10zM14 13.5V12h-1v1.5zM12.5 15a1.5 1.5 0 0 0 1.5-1.5h-1a.5.5 0 0 1-.5.5zM1 13.5A1.5 1.5 0 0 0 2.5 15v-1a.5.5 0 0 1-.5-.5z"/></svg>
+                  Descargar</button>
+                <a href="https://wa.me/59170516064?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20por%20favor." 
+    target="_blank"  data-modal-hide="default-modal" type="button" class="py-2.5 flex gap-2 justify-center items-center px-5 ms-3 cursor-pointer text-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+                  Reservar visita</a>
+            </div>
+        </div>
+    </div>
 </div>

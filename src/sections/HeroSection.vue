@@ -17,11 +17,11 @@
           <source :src="slide.video" type="video/mp4" />
           Tu navegador no soporta video en HTML5.
         </video>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/60"></div>
+        <div class="absolute inset-0 h-full bg-gradient-to-t from-black/80 via-black/50 to-black/60"></div>
       </div>
     </div>
 
-    <div class="relative z-10 flex items-center justify-center h-full">
+    <div class="relative z-10 flex items-center justify-center h-full pb-20 lg:mb-5">
       <div class="text-center text-white px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto">
         <div class="mb-4 sm:mb-6">
           <span
