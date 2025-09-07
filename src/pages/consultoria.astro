@@ -1,0 +1,234 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import NavbarComponent from "../components/NavbarComponent.vue"
+import HeroSection from "../sections/HeroSection.vue"
+import ServicesSection from "../sections/ServicesSection.astro"
+import BudgetSection from "../sections/BudgetSection.astro"
+import AboutSection from "../sections/AboutSection.vue"
+import ContactSection from "../sections/ContactSection.astro"
+import FooterSection from "../sections/FooterSection.astro"
+import SliderComponent from "../components/SliderComponent.astro"
+import consulting from "../assets/videos/consulting.webm";
+import consultingcover from "../assets/imgs/consulting.jpg";
+
+import consulting01 from "../assets/imgs/consulting01.webp";
+import consulting02 from "../assets/imgs/consulting02.webp";
+---
+<MainLayout>
+	<NavbarComponent client:load/>
+     <section
+    class="relative flex flex-col w-full justify-center py-5 px-4 items-center overflow-hidden"
+  >
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute inset-0 w-full h-screen object-cover"
+          poster={consultingcover.src}
+        >
+          <source src={consulting} type="video/webm" />
+          Tu navegador no soporta video en HTML5.
+        </video>
+    
+    
+
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div
+      class="relative z-10 w-full flex flex-col items-center pb-10 pt-5 md:pb-20 md:pt-10"
+    >
+      <h1
+        class="font-bold flex flex-col  w-full justify-center items-center text-center gap-2"
+      >
+        <span class="block text-4xl md:text-5xl lg:text-6xl text-amber-400"
+          >CONSULTORÍA</span
+        >
+        <span class="block text-4xl md:text-5xl  lg:text-6xl text-white"
+          >CONSTRUCTUVA</span
+        >
+      </h1>
+      
+      <h3 class="text-slate-300 flex justify-center items-center text-center font-bold text-lg mt-5">
+    Asesoramiento técnico especializado para tus proyectos
+    </h3>
+      
+
+    </div>
+  </section>
+	<section class="py-16 bg-white max-w-6xl mx-auto">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
+                    NUESTROS SERVICIOS DE CONSULTORÍA
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                    Ofrecemos asesoramiento técnico integral desde la planificación hasta la ejecución de proyectos
+                                constructivos
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md border border-slate-200 text-center">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">📋</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Planificación de Proyectos</h3>
+                        <p class="text-gray-500 text-sm">
+                            Desarrollo de planes maestros, cronogramas y presupuestos detallados para optimizar recursos y
+                            tiempos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md text-center border border-slate-200">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🏗️</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Supervisión Técnica</h3>
+                        <p class="text-gray-500 text-sm">
+                            Control de calidad, seguimiento de avances y verificación del cumplimiento de especificaciones
+                            técnicas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md text-center border border-slate-200">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">📐</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Diseño Estructural</h3>
+                        <p class="text-gray-500 text-sm">
+                            Cálculos estructurales, análisis de cargas y diseño de elementos constructivos según normativas
+                            vigentes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="py-16 bg-gray-50 ">
+        <div class="container mx-auto px-6 ">
+            <div class="text-center mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
+                    SERVICIOS ESPECIALIZADOS
+                </h2>
+                
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16 max-w-6xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Estudios de Factibilidad</h3>
+                    <p class="text-gray-600 mb-6">
+                        Realizamos análisis exhaustivos para determinar la viabilidad técnica y económica de proyectos
+                        constructivos, evaluando aspectos como topografía, suelos, accesibilidad y normativas locales.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Análisis de suelos y topografía</li>
+                        <li>• Evaluación de servicios básicos</li>
+                        <li>• Estudio de impacto ambiental</li>
+                        <li>• Análisis de costos y rentabilidad</li>
+                    </ul>
+                </div>
+                <img
+                    src={consulting01.src}
+                    alt="Estudios de factibilidad"
+                    class="w-full h-60 object-cover rounded-lg"
+                />
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <img
+                     src={consulting02.src}
+                    alt="Gestión de proyectos"
+                    class="w-full rounded-lg md:order-1 h-60 object-cover"
+                />
+                <div class="md:order-2">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Gestión Integral de Proyectos</h3>
+                    <p class="text-gray-600 mb-6">
+                        Coordinamos todos los aspectos del proyecto desde el diseño hasta la entrega final, asegurando el
+                        cumplimiento de plazos, presupuestos y estándares de calidad.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Coordinación de equipos multidisciplinarios</li>
+                        <li>• Control de presupuestos y cronogramas</li>
+                        <li>• Gestión de permisos y licencias</li>
+                        <li>• Supervisión de proveedores y contratistas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+             <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
+                    NUESTRO PROCESO DE TRABAJO
+                </h2>
+                
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Evaluación Inicial</h3>
+                    <p class="text-gray-600 text-sm">Análisis de necesidades y objetivos del proyecto</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Propuesta Técnica</h3>
+                    <p class="text-gray-600 text-sm">Desarrollo de soluciones y presupuesto detallado</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Ejecución</h3>
+                    <p class="text-gray-600 text-sm">Implementación con supervisión continua</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                        04
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Entrega</h3>
+                    <p class="text-gray-600 text-sm">Finalización y documentación completa del proyecto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-slate-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">¿Listo para iniciar tu proyecto?</h2>
+            <p class="text-xl mb-8 opacity-90">Contáctanos para una consulta gratuita</p>
+            <a href="https://wa.me/59170516064?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20por%20favor." 
+    target="_blank"  class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 text-lg rounded-md transition duration-300">
+                Solicitar Consulta
+            </a>
+        </div>
+    </section>
+	<FooterSection/>
+</MainLayout>

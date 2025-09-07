@@ -89,7 +89,7 @@ const { title, urbanizacion } = Astro.params;
   >
     
 
-    <div class="absolute inset-0 bg-slate-500/10"></div>
+    <div class="absolute inset-0 bg-slate-900"></div>
 
     <div
       class="relative z-10 w-full flex justify-between items-center  "
@@ -97,14 +97,14 @@ const { title, urbanizacion } = Astro.params;
       <h1
         class="font-bold flex flex-col md:flex-row w-full justify-start items-start   md:gap-1"
       >
-        <span class="block text-xl text-slate-600"
+        <span class="block text-xl text-slate-100"
           >Urbanizaciones</span
         >
-        <span class="block text-xl  text-green-500"
+        <span class="block text-xl  text-amber-500"
           >Disponibles</span
         >
       </h1>
-      <h1 class="text-white bg-green-500 px-3 py-1 rounded-full font-bold text-xs text-center flex w-full max-w-[15vh] justify-center items-center ">{title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</h1>
+      <h1 class="text-white bg-slate-800 px-3 py-1 rounded-full font-bold text-xs text-center flex w-full max-w-[20vh] justify-center items-center "><strong class="text-amber-500 mr-1">23 </strong> / {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</h1>
         
     </div>
   </section>

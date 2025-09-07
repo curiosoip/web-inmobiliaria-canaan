@@ -1,0 +1,291 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import NavbarComponent from "../components/NavbarComponent.vue"
+import HeroSection from "../sections/HeroSection.vue"
+import ServicesSection from "../sections/ServicesSection.astro"
+import BudgetSection from "../sections/BudgetSection.astro"
+import AboutSection from "../sections/AboutSection.vue"
+import ContactSection from "../sections/ContactSection.astro"
+import FooterSection from "../sections/FooterSection.astro"
+import SliderComponent from "../components/SliderComponent.astro"
+import importaciones from "../assets/videos/imports.webm";
+import importacioncover from "../assets/imgs/imports.jpg";
+
+import consulting01 from "../assets/imgs/consulting01.webp";
+import consulting02 from "../assets/imgs/consulting02.webp";
+
+import machine from "../assets/imgs/machine.webp";
+import topo from "../assets/imgs/topo.webp";
+import materials from "../assets/imgs/materials.webp";
+import imports from "../assets/imgs/import.webp";
+import quality from "../assets/imgs/quality.webp";
+---
+<MainLayout>
+	<NavbarComponent client:load/>
+     <section
+    class="relative flex flex-col w-full justify-center py-5 px-4 items-center overflow-hidden"
+  >
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="absolute inset-0 w-full h-screen object-cover"
+          poster={importacioncover.src}
+        >
+          <source src={importaciones} type="video/webm" />
+          Tu navegador no soporta video en HTML5.
+        </video>
+    
+    
+
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div
+      class="relative z-10 w-full flex flex-col items-center pb-10 pt-5 md:pb-20 md:pt-10"
+    >
+      <h1
+        class="font-bold flex flex-col  w-full justify-center items-center text-center gap-2"
+      >
+        <span class="block text-4xl md:text-5xl lg:text-6xl text-amber-400"
+          >IMPORTACIONES</span
+        >
+        <span class="block text-4xl md:text-5xl  lg:text-6xl text-white"
+          >ESPECIALIZADAS</span
+        >
+      </h1>
+      
+      <h3 class="text-slate-300 flex justify-center items-center text-center font-bold text-lg mt-5">
+    Equipos y tecnología de vanguardia para la construcción
+    </h3>
+      
+
+    </div>
+  </section>
+   <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
+                    PRODUCTOS DE IMPORTACIÓN
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                    Importamos equipos especializados y materiales de alta calidad para proyectos de construcción e
+                    infraestructura
+                </p>
+            </div>
+           
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
+                    <img
+                        src={machine.src}
+                        alt="Maquinaria pesada"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Maquinaria Pesada</h3>
+                        <p class="text-gray-600 mb-4">
+                            Excavadoras, bulldozers, grúas y equipos de movimiento de tierra de las mejores marcas
+                            internacionales.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Excavadoras hidráulicas</li>
+                            <li>• Bulldozers y motoniveladoras</li>
+                            <li>• Grúas móviles y torre</li>
+                            <li>• Compactadores y rodillos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
+                    <img
+                        src={topo.src}
+                        alt="Equipos de topografía"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Equipos de Topografía</h3>
+                        <p class="text-gray-600 mb-4">
+                            Instrumentos de precisión para medición y levantamiento topográfico con tecnología GPS avanzada.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Estaciones totales</li>
+                            <li>• Receptores GPS/GNSS</li>
+                            <li>• Niveles láser</li>
+                            <li>• Drones para topografía</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
+                    <img
+                        src={materials.src}
+                        alt="Materiales especializados"
+                        class="w-full h-48 object-cover"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Materiales Especializados</h3>
+                        <p class="text-gray-600 mb-4">
+                            Materiales de construcción de alta calidad y productos especializados para proyectos específicos.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Acero estructural</li>
+                            <li>• Sistemas de encofrado</li>
+                            <li>• Materiales impermeabilizantes</li>
+                            <li>• Equipos de seguridad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
+                    SERVICIOS DE IMPORTACIÓN
+                </h2>
+               
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Gestión Integral de Importaciones</h3>
+                    <p class="text-gray-600 mb-6">
+                        Nos encargamos de todo el proceso de importación, desde la cotización hasta la entrega en destino,
+                        garantizando el cumplimiento de todas las normativas aduaneras y de calidad.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-orange-500 text-2xl mb-2">🚢</div>
+                            <h4 class="font-bold text-slate-800">Logística Internacional</h4>
+                            <p class="text-sm text-gray-600">Coordinación de transporte marítimo y aéreo</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-blue-500 text-2xl mb-2">📋</div>
+                            <h4 class="font-bold text-slate-800">Trámites Aduaneros</h4>
+                            <p class="text-sm text-gray-600">Gestión completa de documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <img
+                    src={imports.src}
+                    alt="Gestión de importaciones"
+                    class="w-full rounded-lg shadow-md h-60 object-cover"
+                />
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <img
+                    src={quality.src}
+                    alt="Control de calidad"
+                    class="w-full rounded-lg shadow-md md:order-1 h-60 object-cover"
+                />
+                <div class="md:order-2">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Control de Calidad y Certificaciones</h3>
+                    <p class="text-gray-600 mb-6">
+                        Verificamos que todos los productos cumplan con los estándares internacionales de calidad y las
+                        normativas técnicas requeridas para su uso en Bolivia.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-green-600">✓</span>
+                            </div>
+                            <span class="text-gray-700">Inspección pre-embarque</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-green-600">✓</span>
+                            </div>
+                            <span class="text-gray-700">Certificaciones de calidad</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-green-600">✓</span>
+                            </div>
+                            <span class="text-gray-700">Garantías internacionales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
+                    NUESTROS PROVEEDORES INTERNACIONALES
+                </h2>
+                
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <!-- Partner 1 -->
+                <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36"><path fill="#de2910" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4z"/><path fill="#ffde02" d="m11.136 8.977l.736.356l.589-.566l-.111.81l.72.386l-.804.144l-.144.804l-.386-.72l-.81.111l.566-.589zm4.665 2.941l-.356.735l.566.59l-.809-.112l-.386.721l-.144-.805l-.805-.144l.721-.386l-.112-.809l.59.566zm-.957 3.779l.268.772l.817.017l-.651.493l.237.783l-.671-.467l-.671.467l.236-.783l-.651-.493l.817-.017zm-3.708 3.28l.736.356l.589-.566l-.111.81l.72.386l-.804.144l-.144.804l-.386-.72l-.81.111l.566-.589zM7 10.951l.929 2.671l2.826.058l-2.253 1.708l.819 2.706L7 16.479l-2.321 1.615l.819-2.706l-2.253-1.708l2.826-.058z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">China</h3>
+                        <p class="text-gray-600 text-sm">Maquinaria pesada y equipos industriales</p>
+                    </div>
+                </div>
+
+                <!-- Partner 2 -->
+                <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64"><path fill="#ec1c24" d="M26 17.76v3.38h37.965c-.053-1.09-.167-2.468-.575-3.38"/><path fill="#e6e7e8" d="M61.6 14.38H26v3.38h37.39c-.406-1.261-1.01-2.411-1.79-3.38"/><path fill="#ec1c24" d="M54 11H26v3.38h35.6C59.931 12.29 57.184 11 54 11"/><path fill="#e6e7e8" d="M63.965 21.14H26v3.38h38v-2.253c0-.201-.013-.397-.019-.594c-.004-.054-.01-.193-.016-.533"/><path fill="#ec1c24" d="M26 27.9h38v-3.38H26z"/><path fill="#e6e7e8" d="M26 31.28h38V27.9H26z"/><path fill="#ec1c24" d="M26 31.28h38v3.38H26z"/><path fill="#e6e7e8" d="M0 34.66v3.38h64v-3.38H26z"/><path fill="#ec1c24" d="M0 38.04h64v3.38H0z"/><path fill="#e6e7e8" d="M.005 43.499s-.009.819.015 1.301h63.96c.028-.494.015-1.301.015-1.301L64 41.42H0z"/><path fill="#ec1c24" d="M10 55h44c3.193 0 5.847-1.16 7.66-3.44H2.33C4.202 53.89 6.906 55 9.995 55"/><path fill="#e6e7e8" d="M2.335 51.56h59.33a10 10 0 0 0 1.74-3.38H.605a10.4 10.4 0 0 0 1.735 3.38"/><path fill="#ec1c24" d="M.6 48.18h62.8a14.4 14.4 0 0 0 .58-3.38H.02c.099 1.156.191 2.029.58 3.38"/><path fill="#176496" d="M26 11H10C3.373 11 0 15.925 0 22v12.66h26z"/><path fill="#fff" d="m2.798 16.976l.544-.418l.543.418l-.211-.672l.541-.411h-.668l-.207-.675l-.206.675h-.667l.543.411zm3.594 0l.544-.418l.543.418l-.21-.672l.54-.411h-.667l-.207-.675l-.206.675H6.06l.543.411zm3.965 0l.543-.418l.544.418l-.211-.672l.54-.411h-.663l-.21-.675l-.207.675h-.663l.537.411zm3.936 0l.543-.418l.544.418l-.21-.672l.54-.411h-.67l-.204-.675l-.206.675h-.668l.542.411zm3.95 0l.544-.418l.543.418l-.21-.672l.541-.411h-.669l-.206-.675l-.206.675h-.667l.54.411zM4.711 18.731l.543-.417l.543.417l-.209-.671l.54-.411H5.46l-.207-.674l-.203.674h-.67l.541.411zm3.595 0l.543-.417l.543.417l-.21-.671l.54-.411H9.05l-.201-.674l-.207.674h-.667l.541.411zm3.965 0l.542-.417l.543.417l-.21-.671l.541-.411h-.667l-.207-.674l-.207.674h-.668l.541.411zm3.934 0l.544-.417l.544.417l-.213-.671l.542-.411h-.667l-.207-.674l-.205.674h-.668l.541.411zm3.955 0l.539-.417l.543.417l-.212-.671l.542-.411h-.666l-.208-.674l-.205.674h-.668l.541.411zm2.227-1.755l.543-.418l.544.418l-.211-.672l.54-.411h-.663l-.211-.675l-.206.675h-.673l.547.411zM2.745 31.02l.544-.413l.543.413l-.21-.666l.54-.412l-.667.002l-.208-.674l-.204.674l-.669-.002l.541.412zm3.595 0l.543-.413l.544.413l-.211-.666l.54-.412l-.666.002l-.208-.674l-.205.674l-.667-.002l.54.412zm3.965 0l.543-.413l.544.413l-.211-.666l.54-.412l-.671.002l-.203-.674l-.206.674l-.667-.002l.541.412zm3.936 0l.543-.413l.543.413l-.207-.666l.537-.412l-.668.002l-.206-.674l-.206.674l-.667-.002l.54.412zm3.949 0l.544-.413l.544.413l-.208-.666l.537-.412l-.667.002l-.207-.674l-.205.674l-.668-.002l.54.412zm4.144 0l.543-.413l.544.413l-.211-.666l.541-.412l-.671.002l-.204-.674l-.206.674l-.67-.002l.544.412zM2.798 20.488l.544-.418l.543.418l-.211-.672l.541-.411l-.668.002l-.207-.676l-.206.676l-.667-.002l.543.411zm3.594 0l.544-.418l.543.418l-.21-.672l.54-.411l-.667.002l-.207-.676l-.206.676l-.669-.002l.543.411zm3.965 0l.543-.418l.544.418l-.211-.672l.54-.411l-.663.002l-.21-.676l-.207.676l-.663-.002l.537.411zm3.936 0l.543-.418l.544.418l-.21-.672l.54-.411l-.67.002l-.204-.676l-.206.676l-.668-.002l.542.411zm3.95 0l.544-.418l.543.418l-.21-.672l.541-.411l-.669.002l-.206-.676l-.206.676l-.667-.002l.54.411zM4.711 22.244l.543-.417l.543.417l-.209-.671l.54-.413H5.46l-.207-.672l-.203.672h-.67l.541.413zm3.595 0l.543-.417l.543.417l-.21-.671l.54-.413H9.05l-.201-.672l-.207.672h-.667l.541.413zm3.965 0l.542-.417l.543.417l-.21-.671l.541-.413h-.667l-.207-.672l-.207.672h-.668l.541.413zm3.934 0l.544-.417l.544.417l-.213-.671l.542-.413h-.667l-.207-.672l-.205.672h-.668l.541.413zm3.955 0l.539-.417l.543.417l-.212-.671l.542-.413h-.666l-.208-.672l-.205.672h-.668l.541.413zm2.227-1.756l.543-.418l.544.418l-.211-.672l.54-.411l-.663.002l-.211-.676l-.206.676l-.673-.002l.547.411zM2.745 24l.544-.417l.543.417l-.211-.67l.541-.412l-.668.002l-.207-.676l-.204.676l-.669-.002l.541.412zm3.595 0l.543-.417l.544.417l-.211-.67l.54-.412l-.666.002l-.208-.676l-.205.676l-.667-.002l.539.412zm3.965 0l.543-.417l.543.417l-.21-.67l.54-.412l-.671.002l-.203-.676l-.206.676l-.667-.002l.541.412zm3.936 0l.542-.417l.544.417l-.207-.67l.537-.412l-.668.002l-.206-.676l-.206.676l-.667-.002l.54.412zm3.949 0l.544-.417l.543.417l-.207-.67l.537-.412l-.668.002l-.206-.676l-.205.676l-.668-.002l.54.412zM4.658 25.756l.543-.416l.543.416l-.209-.666l.539-.414h-.668L5.2 24l-.205.676h-.668l.541.414zm3.595 0l.543-.416l.543.416l-.21-.666l.54-.414H9L8.795 24l-.206.676h-.668l.542.414zm3.966 0l.541-.416l.544.416l-.214-.666l.544-.414h-.667L12.76 24l-.206.676h-.668l.541.414zm3.931 0l.546-.416l.544.416l-.21-.666l.539-.414h-.667L16.695 24l-.205.676h-.668l.541.414zm3.95 0l.546-.416l.544.416l-.211-.666l.542-.414h-.667L20.646 24l-.206.676h-.668l.541.414zM22.334 24l.543-.417l.543.417l-.21-.67l.541-.412l-.671.002l-.204-.676l-.206.676l-.67-.002l.544.412zM2.745 27.513l.544-.413l.543.413l-.211-.671l.541-.412l-.668.002l-.207-.676l-.204.676l-.669-.002l.541.412zm3.595 0l.543-.413l.544.413l-.211-.671l.54-.412l-.666.002l-.208-.676l-.205.676l-.667-.002l.539.412zm3.965 0l.543-.413l.543.413l-.21-.671l.54-.412l-.671.002l-.203-.676l-.206.676l-.667-.002l.541.412zm3.936 0l.542-.413l.544.413l-.207-.671l.537-.412l-.668.002l-.206-.676l-.206.676l-.667-.002l.54.412zm3.949 0l.544-.413l.543.413l-.207-.671l.537-.412l-.668.002l-.206-.676l-.205.676l-.668-.002l.54.412zM4.658 29.27l.543-.418l.543.418l-.209-.672l.539-.408h-.668l-.206-.677l-.205.677h-.668l.541.408zm3.595 0l.543-.418l.543.418l-.21-.672l.54-.408H9l-.205-.677l-.206.677h-.668l.542.408zm3.966 0l.541-.418l.544.418l-.214-.672l.544-.408h-.667l-.207-.677l-.206.677h-.668l.541.408zm3.931 0l.546-.418l.544.418l-.21-.672l.539-.408h-.667l-.207-.677l-.205.677h-.668l.541.408zm3.95 0l.546-.418l.544.418l-.211-.672l.542-.408h-.667l-.208-.677l-.206.677h-.668l.541.408zm2.234-1.757l.543-.413l.543.413l-.21-.671l.541-.412l-.671.002l-.204-.676l-.206.676l-.67-.002l.544.412z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Estados Unidos</h3>
+                        <p class="text-gray-600 text-sm">Tecnología GPS y equipos de precisión</p>
+                    </div>
+                </div>
+
+                <!-- Partner 3 -->
+                <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36"><path fill="#ffcd05" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0z"/><path fill="#ed1f24" d="M0 14h36v9H0z"/><path fill="#141414" d="M32 5H4a4 4 0 0 0-4 4v5h36V9a4 4 0 0 0-4-4"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Alemania</h3>
+                        <p class="text-gray-600 text-sm">Herramientas especializadas y sistemas</p>
+                    </div>
+                </div>
+
+                <!-- Partner 4 -->
+                <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36"><path fill="#009b3a" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4z"/><path fill="#fedf01" d="M32.728 18L18 29.124L3.272 18L18 6.875z"/><circle cx="17.976" cy="17.924" r="6.458" fill="#002776"/><path fill="#cbe9d4" d="M12.277 14.887a6.4 6.4 0 0 0-.672 2.023c3.995-.29 9.417 1.891 11.744 4.595c.402-.604.7-1.28.883-2.004c-2.872-2.808-7.917-4.63-11.955-4.614"/><path fill="#88c9f9" d="M12 18.233h1v1h-1zm1 2h1v1h-1z"/><path fill="#55acee" d="M15 18.233h1v1h-1zm2 1h1v1h-1zm4 2h1v1h-1zm-3 1h1v1h-1zm3-6h1v1h-1z"/><path fill="#3b88c3" d="M19 20.233h1v1h-1z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Brasil</h3>
+                        <p class="text-gray-600 text-sm">Materiales de construcción y acero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-slate-800 text-white ">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">¿Listo para iniciar tu proyecto?</h2>
+            <p class="text-xl mb-8 opacity-90">Contáctanos para una consulta gratuita</p>
+            <a href="https://wa.me/59170516064?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20por%20favor." 
+    target="_blank"  class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 text-lg rounded-md transition duration-300">
+                Solicitar Consulta
+            </a>
+        </div>
+    </section>
+	<FooterSection/>
+</MainLayout>
