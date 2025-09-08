@@ -20,7 +20,7 @@ import PlanimetriaMapComponent from "./PlanimetriaMapComponent.vue"
     </div>
 
    <div class="relative lg:[150%] -mx-0 lg:-mx-5 mt-2"> 
-    <img src={img} alt={titleUrbanizacion} class="w-full h-48 object-cover rounded-4xl shadow-md shadow-green-900" />
+    <img src={img} alt={titleUrbanizacion} class="w-full h-48 object-cover rounded-4xl shadow-md shadow-emerald-200" />
 
   <!-- Badges en las esquinas -->
   <span class="absolute top-2 left-5 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
@@ -41,42 +41,19 @@ import PlanimetriaMapComponent from "./PlanimetriaMapComponent.vue"
 
 
 
-    
-    <!-- Contenido -->
-    <div class="px-4 py-2 flex flex-col justify-between gap-1">
-        
-        
-        <footer class="flex justify-between items-center">
-            <div class="flex flex-col justify-start items-start gap-2">
-                <h2 class="text-slate-500 font-semibold text-xs ">Lotes desde</h2>
-                <h1 class="text-2xl font-semibold flex gap-2 bg-green-500 justify-center items-center text-white px-2 py-1 rounded-xl"><strong class="text-green-100">Bs.</strong> 17.600</h1>
-            </div>
-            <div class="flex flex-col justify-end items-end gap-2">
-                <h2 class="text-slate-500 font-semibold text-xs ">Financiamiento desde</h2>
-                <h1 class="text-md font-semibold flex gap-2 justify-center items-center text-teal-500"><strong class="text-teal-600">Bs.</strong> 2.500/mes</h1>
-            </div>
-
-        </footer>
-        <!-- Contenedor de badges debajo de la descripción -->
-         <button type="button"
-    data-modal-target="default-modal"
-    data-modal-toggle="default-modal"
-       class=" text-slate-800 mt-3 mb-2 flex gap-2 w-full cursor-pointer justify-center items-center hover:text-slate-900 border border-slate-800 font-medium rounded-xl text-sm px-4 py-2 ">
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5c.53 0 1.04.13 1.5.35c1.17.57 2 1.78 2 3.15c0 1.54-1.23 3.54-2.23 4.91c-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg> 
-       Ver Planimetría
-    </button>
+        <div class="px-4 py-2 flex flex-col justify-between gap-1">
 
         
         
     </div>
-   
-
-    <!-- Botón centrado y sobresaliendo -->
-    <a href={`/urbanizaciones/${ciudad?ciudad:"lapaz"}/${titleUrbanizacion}/lotes`} 
-       class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-white flex gap-2 w-50  justify-center items-center bg-amber-500 hover:bg-amber-600 font-medium rounded-full text-sm px-4 py-2 shadow-md">
+  
+    <button type="button"
+    data-modal-target="default-modal"
+    data-modal-toggle="default-modal"
+       class="absolute -bottom-5 left-1/2 cursor-pointer transform -translate-x-1/2 text-white flex gap-2 w-50  justify-center items-center bg-amber-500 hover:bg-amber-600 font-medium rounded-full text-sm px-4 py-2 shadow-md">
        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2h16c1.1 0 2 .9 2 2v6H10v10h4.55q.27.45.54.84c.29.43.57.82.83 1.16H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2m4 2H4v10h4zM4 16v4h4v-4zm6-8h10V4H10zm8.5 14s-.58-.65-1.27-1.59c-.09-.13-.19-.27-.29-.41C16 18.66 15 16.89 15 15.5c0-1.9 1.6-3.5 3.5-3.5c.53 0 1.04.13 1.5.35c1.17.57 2 1.78 2 3.15c0 1.54-1.23 3.54-2.23 4.91c-.69.94-1.27 1.59-1.27 1.59m-1.2-6.4c0 .6.5 1.2 1.2 1.2s1.3-.6 1.2-1.2c0-.6-.6-1.2-1.2-1.2s-1.2.5-1.2 1.2"/></svg> 
        Ver lotes disponibles
-    </a>
+  </button>
 </div>
 <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-100 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] ">
     <div class="relative p-4 w-full max-w-5xl max-h-full">

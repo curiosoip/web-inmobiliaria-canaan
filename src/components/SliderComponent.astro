@@ -5,25 +5,26 @@ import img2 from "../assets/imgs/19.jpg";
 import img3 from "../assets/imgs/20.jpg";
 import img4 from "../assets/imgs/21.jpg";
 import img5 from "../assets/imgs/22.jpg";
+import img6 from "../assets/imgs/23.jpg";
+import img7 from "../assets/imgs/24.jpg";
+import img8 from "../assets/imgs/25.jpg";
+import img9 from "../assets/imgs/26.jpg";
+import img10 from "../assets/imgs/27.jpg";
 ---
+
 <div class="flex flex-col justify-center items-center w-full py-1 bg-slate-800">
   <div class="wrapper">
     <div class="slider">
-      <div class="item item1">
-        <Image src={img1} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" />
-      </div>
-      <div class="item item2">
-        <Image src={img2} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" />
-      </div>
-      <div class="item item3">
-        <Image src={img3} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" />
-      </div>
-      <div class="item item4">
-        <Image src={img4} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" />
-      </div>
-      <div class="item item5">
-        <Image src={img5} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" />
-      </div>
+      <div class="item item1"><Image src={img1} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item2"><Image src={img2} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item3"><Image src={img3} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item4"><Image src={img4} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item5"><Image src={img5} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item6"><Image src={img6} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item7"><Image src={img7} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item8"><Image src={img8} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item9"><Image src={img9} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
+      <div class="item item10"><Image src={img10} alt="Canaan Inmobiliaria" class="w-full h-full border-2 border-slate-500/30 rounded-lg object-cover object-center" /></div>
     </div>
   </div>
 </div>
@@ -58,19 +59,24 @@ import img5 from "../assets/imgs/22.jpg";
 
 .item {
   width: 250px;
-  height: 100%; /* clave: ocupa toda la altura de .wrapper */
+  height: 100%;
   position: absolute;
-  left: max(calc(250px * 5), 100%);
+  left: max(calc(250px * 10), 100%);
   animation-name: scrollLeft;
   animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-/* Ajuste de delays para 5 items */
-.item1 { animation-delay: calc(30s / 5 * (5 - 1) * -1); }
-.item2 { animation-delay: calc(30s / 5 * (5 - 2) * -1); }
-.item3 { animation-delay: calc(30s / 5 * (5 - 3) * -1); }
-.item4 { animation-delay: calc(30s / 5 * (5 - 4) * -1); }
-.item5 { animation-delay: calc(30s / 5 * (5 - 5) * -1); }
+/* Ajuste de delays para 10 items */
+.item1  { animation-delay: calc(30s / 10 * (10 - 1) * -1); }
+.item2  { animation-delay: calc(30s / 10 * (10 - 2) * -1); }
+.item3  { animation-delay: calc(30s / 10 * (10 - 3) * -1); }
+.item4  { animation-delay: calc(30s / 10 * (10 - 4) * -1); }
+.item5  { animation-delay: calc(30s / 10 * (10 - 5) * -1); }
+.item6  { animation-delay: calc(30s / 10 * (10 - 6) * -1); }
+.item7  { animation-delay: calc(30s / 10 * (10 - 7) * -1); }
+.item8  { animation-delay: calc(30s / 10 * (10 - 8) * -1); }
+.item9  { animation-delay: calc(30s / 10 * (10 - 9) * -1); }
+.item10 { animation-delay: calc(30s / 10 * (10 - 10) * -1); }
 </style>
