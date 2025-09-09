@@ -8,12 +8,12 @@ import calacoto from "../assets/imgs/calacoto.jpg";
 const {title}=Astro.params
 
 ---
-<section class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden">
+<section class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
 
 
   <div class="relative z-10 flex w-full justify-center items-center flex-col text-center mb-12 sm:mb-16 lg:mb-20">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold max-w-3xl text-slate-800 mb-4 sm:mb-6 tracking-tight">
-        ENCUENTRA TU LUGAR IDEAL EN {title=="lapaz"?"LA PAZ":title=="cochabamba"?"COCHABAMBA":"SANTA CRUZ"}
+        ENCUENTRA TU LUGAR IDEAL EN <strong class="text-amber-400">{title=="lapaz"?"LA PAZ":title=="cochabamba"?"COCHABAMBA":"SANTA CRUZ"}</strong>
       </h2>
       <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
         Lotes urbanizados en <strong>las mejores zonas de {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong>  con servicios básicos y financiamiento accesible
