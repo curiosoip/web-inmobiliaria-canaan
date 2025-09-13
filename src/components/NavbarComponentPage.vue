@@ -2,7 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue"
 import logo from "../assets/logo.svg";
 
-const activeSection = ref("inicio")
+const activeSection = ref("servicios")
 const isMenuOpen = ref(false)
 const pathname = ref("");
 const isMegaOpen = ref(false)
@@ -12,46 +12,19 @@ function toggleMegaMenu() {
   isMegaOpen.value = !isMegaOpen.value
 }
 
-
-
-function scrollToSection(id) {
-  
-    const el = document.getElementById(id)
-    
-    if (el) {
-      
-        el.scrollIntoView({ behavior: "smooth" })
-    }
-    isMenuOpen.value = false 
+function inicioPage(){
+  window.location.href = "/"
+}
+function nosotrosPage(){
+  window.location.href = "/"
+  document.getElementById("nosotros")
+}
+function contactopage(){
+  window.location.href = "/"
+  document.getElementById("contacto")
 }
 
-let observer
 
-onMounted(() => {
-    const sections = document.querySelectorAll("section[id]")
-       observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    activeSection.value = entry.target.id
-                }
-            })
-        },
-        {
-            threshold: 0.1,                 
-            rootMargin: "-20% 0px -10% 0px" 
-        }
-    )
-
-
-    sections.forEach((sec) => observer.observe(sec))
-  
-   
-})
-
-onBeforeUnmount(() => {
-    if (observer) observer.disconnect()
-})
 </script>
 
 <template>
@@ -64,7 +37,7 @@ onBeforeUnmount(() => {
                 </div>
             </a>
 
-            <div class="flex md:order-2 space-x-1 justify-center items-center md:space-x-0 rtl:space-x-reverse px-4">
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse px-4">
                 <button type="button"
                     class="text-slate-800 flex gap-2 justify-center items-center bg-yellow-500 cursor-pointer border-2 border-yellow-400 hover:text-slate-950 font-medium rounded-lg text-lg px-4 py-2 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -95,7 +68,7 @@ onBeforeUnmount(() => {
                 <ul
                     class="flex flex-col justify-center items-start md:items-center p-4 md:p-0 mt-1 gap-3 font-medium md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                     <li>
-                        <button  @click="scrollToSection('inicio')" :class="[
+                        <button  @click="inicioPage" :class="[
                             'transition-all duration-300 cursor-pointer font-semibold text-sm tracking-wider uppercase',
                             activeSection==='inicio' && isMegaOpen===false ? 'text-amber-300 font-bold' : 'text-slate-100 hover:text-amber-300'
                         ]">
@@ -106,10 +79,7 @@ onBeforeUnmount(() => {
                  <button 
   @click="() => { toggleMegaMenu();}" 
   :class="[
-    'flex gap-1 justify-center items-center transition-all duration-300 cursor-pointer font-semibold text-sm tracking-wider uppercase',
-    activeSection === 'servicios' 
-      ? 'text-amber-300 font-bold' 
-      : 'text-slate-100 hover:text-amber-300'
+    'flex gap-1 justify-center items-center text-amber-300 transition-all duration-300 cursor-pointer font-bold text-sm tracking-wider uppercase'
   ]"
 >
   SERVICIOS
@@ -123,7 +93,7 @@ onBeforeUnmount(() => {
                 </li>
                     
                     <li>
-                        <button @click="scrollToSection('nosotros')" :class="[
+                        <button @click="nosotrosPage" :class="[
                             'transition-all duration-300 cursor-pointer font-semibold text-sm tracking-wider uppercase',
                             activeSection === 'nosotros' ? 'text-amber-300 font-bold' : 'text-slate-100 hover:text-amber-300'
                         ]">
@@ -131,7 +101,7 @@ onBeforeUnmount(() => {
                         </button>
                     </li>
                     <li>
-                        <button @click="scrollToSection('contacto')" :class="[
+                        <button @click="contactopage" :class="[
                             'transition-all duration-300 cursor-pointer font-semibold text-sm tracking-wider uppercase',
                             activeSection === 'contacto' ? 'text-amber-300 font-bold' : 'text-slate-100 hover:text-amber-300'
                         ]">
@@ -147,7 +117,7 @@ onBeforeUnmount(() => {
   <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
     <ul>
       <li>
-        <a href="/urbanizaciones/lapaz/" class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
+        <a href="/urbanizaciones/lapaz/"  class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
           <div class=" text-amber-400 font-bold flex gap-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.398 17.804C13.881 17.034 19 14.016 19 9A7 7 0 1 0 5 9c0 5.016 5.119 8.035 6.602 8.804a.86.86 0 0 0 .796 0M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6" clip-rule="evenodd"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.062 16.5c.615.456.938.973.938 1.5s-.323 1.044-.938 1.5c-.614.456-1.498.835-2.562 1.098S13.229 21 12 21s-2.436-.139-3.5-.402s-1.948-.642-2.562-1.098C5.323 19.044 5 18.527 5 18s.323-1.044.938-1.5"/></g></svg>
             VENTA DE LOTES Y VIVIENDAS</div>
