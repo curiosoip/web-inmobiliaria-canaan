@@ -8,7 +8,7 @@ import AboutSection from "../sections/AboutSection.vue"
 import ContactSection from "../sections/ContactSection.astro"
 import FooterSection from "../sections/FooterSection.astro"
 import SliderComponent from "../components/SliderComponent.astro"
-import importaciones from "../assets/videos/imports.webm";
+import importaciones from "../assets/videos/imp.webm";
 import importacioncover from "../assets/imgs/imports.jpg";
 
 import consulting01 from "../assets/imgs/consulting01.webp";
@@ -22,7 +22,7 @@ import quality from "../assets/imgs/quality.webp";
 ---
 <MainLayout>
 	<NavbarComponent client:load/>
-     <section
+     <section id="servicios"
     class="relative flex flex-col w-full justify-center py-5 px-4 items-center overflow-hidden"
   >
 
@@ -40,7 +40,7 @@ import quality from "../assets/imgs/quality.webp";
     
     
 
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/70"></div>
 
     <div
       class="relative z-10 w-full flex flex-col items-center pb-10 pt-5 md:pb-20 md:pt-10"
@@ -279,8 +279,8 @@ import quality from "../assets/imgs/quality.webp";
 
     <section class="py-16 bg-slate-800 text-white ">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">¿Listo para iniciar tu proyecto?</h2>
-            <p class="text-xl mb-8 opacity-90">Contáctanos para una consulta gratuita</p>
+            <h2 class="text-3xl font-bold mb-4">¿Necesitas equipos especializados?</h2>
+            <p class="text-xl mb-8 opacity-90">Cotiza tus importaciones con nosotros</p>
             <a href="https://wa.me/59170516064?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20por%20favor." 
     target="_blank"  class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 text-lg rounded-md transition duration-300">
                 Solicitar Consulta

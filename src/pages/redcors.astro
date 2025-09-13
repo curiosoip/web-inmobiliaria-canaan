@@ -8,15 +8,20 @@ import AboutSection from "../sections/AboutSection.vue"
 import ContactSection from "../sections/ContactSection.astro"
 import FooterSection from "../sections/FooterSection.astro"
 import SliderComponent from "../components/SliderComponent.astro"
-import consulting from "../assets/videos/consulting.webm";
+import cors from "../assets/videos/cors.webm";
 import consultingcover from "../assets/imgs/consulting.jpg";
 
 import consulting01 from "../assets/imgs/consulting01.webp";
 import consulting02 from "../assets/imgs/consulting02.webp";
+
+import topocart from "../assets/imgs/topocart.jpg"
+import ingconst from "../assets/imgs/ingconst.jpg"
+import agri from "../assets/imgs/agri.jpg"
+
 ---
 <MainLayout>
 	<NavbarComponent client:load/>
-     <section
+     <section id="servicios"
     class="relative flex flex-col w-full justify-center py-5 px-4 items-center overflow-hidden"
   >
 
@@ -28,13 +33,13 @@ import consulting02 from "../assets/imgs/consulting02.webp";
           class="absolute inset-0 w-full h-screen object-cover"
           poster={consultingcover.src}
         >
-          <source src={consulting} type="video/webm" />
+          <source src={cors} type="video/webm" />
           Tu navegador no soporta video en HTML5.
         </video>
     
     
 
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/70"></div>
 
     <div
       class="relative z-10 w-full flex flex-col items-center pb-10 pt-5 md:pb-20 md:pt-10"
@@ -43,71 +48,66 @@ import consulting02 from "../assets/imgs/consulting02.webp";
         class="font-bold flex flex-col  w-full justify-center items-center text-center gap-2"
       >
         <span class="block text-4xl md:text-5xl lg:text-6xl text-amber-400"
-          >CONSULTORÍA</span
+          >RED CORS</span
         >
         <span class="block text-4xl md:text-5xl  lg:text-6xl text-white"
-          >CONSTRUCTUVA</span
+          >GPS EN TIEMPO REAL</span
         >
       </h1>
       
       <h3 class="text-slate-300 flex justify-center items-center text-center font-bold text-lg mt-5">
-    Asesoramiento técnico especializado para tus proyectos
+    Posicionamiento de alta precisión para aplicaciones técnicas
     </h3>
       
 
     </div>
   </section>
-	<section class="py-16 bg-white max-w-6xl mx-auto">
+	<section class="py-16 bg-slate-100">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
-                    NUESTROS SERVICIOS DE CONSULTORÍA
-                </h2>
-                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                    Ofrecemos asesoramiento técnico integral desde la planificación hasta la ejecución de proyectos
-                                constructivos
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">¿Qué es la Red CORS?</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    La Red CORS (Continuously Operating Reference Stations) es un sistema de estaciones de referencia GPS que
+                    operan continuamente para proporcionar correcciones en tiempo real con precisión centimétrica.
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-lg shadow-md border border-slate-200 text-center">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                     <div class="p-6">
-                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">📋</span>
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🛰️</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-slate-800">Planificación de Proyectos</h3>
-                        <p class="text-gray-500 text-sm">
-                            Desarrollo de planes maestros, cronogramas y presupuestos detallados para optimizar recursos y
-                            tiempos.
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Precisión Centimétrica</h3>
+                        <p class="text-gray-600">
+                            Obtén posicionamiento con precisión de 1-3 cm en tiempo real para tus proyectos más exigentes.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-lg shadow-md text-center border border-slate-200">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                     <div class="p-6">
-                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">🏗️</span>
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">⚡</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-slate-800">Supervisión Técnica</h3>
-                        <p class="text-gray-500 text-sm">
-                            Control de calidad, seguimiento de avances y verificación del cumplimiento de especificaciones
-                            técnicas.
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Tiempo Real</h3>
+                        <p class="text-gray-600">
+                            Correcciones instantáneas vía internet o radio para trabajos de campo sin interrupciones.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-lg shadow-md text-center border border-slate-200">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                     <div class="p-6">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-2xl">📐</span>
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🌐</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-slate-800">Diseño Estructural</h3>
-                        <p class="text-gray-500 text-sm">
-                            Cálculos estructurales, análisis de cargas y diseño de elementos constructivos según normativas
-                            vigentes.
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Cobertura Nacional</h3>
+                        <p class="text-gray-600">
+                            Red de estaciones distribuidas estratégicamente para cobertura completa del territorio.
                         </p>
                     </div>
                 </div>
@@ -115,115 +115,168 @@ import consulting02 from "../assets/imgs/consulting02.webp";
         </div>
     </section>
 
-    <!-- Detailed Services -->
-    <section class="py-16 bg-gray-50 ">
-        <div class="container mx-auto px-6 ">
-            <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
-                    SERVICIOS ESPECIALIZADOS
-                </h2>
-                
-            </div>
+    <!-- Applications -->
+    <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Aplicaciones de la Red CORS</h2>
 
             <div class="grid md:grid-cols-2 gap-12 items-center mb-16 max-w-6xl mx-auto">
                 <div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Estudios de Factibilidad</h3>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Topografía y Cartografía</h3>
                     <p class="text-gray-600 mb-6">
-                        Realizamos análisis exhaustivos para determinar la viabilidad técnica y económica de proyectos
-                        constructivos, evaluando aspectos como topografía, suelos, accesibilidad y normativas locales.
+                        Ideal para levantamientos topográficos de alta precisión, creación de mapas detallados y establecimiento
+                        de redes geodésicas de referencia.
                     </p>
                     <ul class="space-y-2 text-gray-600">
-                        <li>• Análisis de suelos y topografía</li>
-                        <li>• Evaluación de servicios básicos</li>
-                        <li>• Estudio de impacto ambiental</li>
-                        <li>• Análisis de costos y rentabilidad</li>
+                        <li>• Levantamientos catastrales</li>
+                        <li>• Mapeo de infraestructura</li>
+                        <li>• Control de deformaciones</li>
+                        <li>• Redes geodésicas</li>
                     </ul>
                 </div>
-                <img
-                    src={consulting01.src}
-                    alt="Estudios de factibilidad"
-                    class="w-full h-60 object-cover rounded-lg"
-                />
+                <img src={topocart.src} alt="Topografía con GPS" class="w-full rounded-lg shadow-md h-60 object-cover">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16 max-w-6xl mx-auto">
+                <img src={ingconst.src} alt="Construcción con GPS" class="w-full rounded-lg shadow-md h-60 object-cover">
+                <div class="md:order-2">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Construcción e Ingeniería</h3>
+                    <p class="text-gray-600 mb-6">
+                        Guiado de maquinaria, control de calidad en construcción y monitoreo de estructuras con la máxima
+                        precisión disponible.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Guiado de maquinaria 3D</li>
+                        <li>• Control de pavimentos</li>
+                        <li>• Replanteo de estructuras</li>
+                        <li>• Monitoreo de obras</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <img
-                     src={consulting02.src}
-                    alt="Gestión de proyectos"
-                    class="w-full rounded-lg md:order-1 h-60 object-cover"
-                />
-                <div class="md:order-2">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Gestión Integral de Proyectos</h3>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Agricultura de Precisión</h3>
                     <p class="text-gray-600 mb-6">
-                        Coordinamos todos los aspectos del proyecto desde el diseño hasta la entrega final, asegurando el
-                        cumplimiento de plazos, presupuestos y estándares de calidad.
+                        Optimización de cultivos mediante agricultura de precisión, guiado automático de maquinaria agrícola y
+                        mapeo detallado de campos.
                     </p>
                     <ul class="space-y-2 text-gray-600">
-                        <li>• Coordinación de equipos multidisciplinarios</li>
-                        <li>• Control de presupuestos y cronogramas</li>
-                        <li>• Gestión de permisos y licencias</li>
-                        <li>• Supervisión de proveedores y contratistas</li>
+                        <li>• Guiado automático de tractores</li>
+                        <li>• Mapeo de rendimientos</li>
+                        <li>• Aplicación variable de insumos</li>
+                        <li>• Planificación de cultivos</li>
                     </ul>
                 </div>
+                <img src={agri.src} alt="Agricultura de precisión" class="w-full rounded-lg shadow-md h-60 object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Process -->
-    <section class="py-16 bg-white">
+    <!-- Technical Specifications -->
+    <section class="py-16 bg-slate-100">
         <div class="container mx-auto px-6">
-             <div class="flex flex-col w-full justify-center items-center text-center mb-12 sm:mb-16 lg:mb-20">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl max-w-4xl font-bold text-slate-800 mb-4 sm:mb-6 tracking-tight">
-                    NUESTRO PROCESO DE TRABAJO
-                </h2>
-                
-            </div>
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Especificaciones Técnicas</h2>
 
-            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <!-- Step 1 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        01
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Precisión y Rendimiento</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Precisión horizontal:</span>
+                                <span class="font-semibold">1-3 cm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Precisión vertical:</span>
+                                <span class="font-semibold">2-5 cm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Tiempo de inicialización:</span>
+                                <span class="font-semibold">&lt; 30 segundos</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Disponibilidad:</span>
+                                <span class="font-semibold">99.5%</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Evaluación Inicial</h3>
-                    <p class="text-gray-600 text-sm">Análisis de necesidades y objetivos del proyecto</p>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        02
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Compatibilidad</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Constelaciones:</span>
+                                <span class="font-semibold">GPS, GLONASS, Galileo</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Formatos:</span>
+                                <span class="font-semibold">RTCM 3.x, CMR+</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Comunicación:</span>
+                                <span class="font-semibold">Internet, Radio UHF</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Alcance radio:</span>
+                                <span class="font-semibold">Hasta 15 km</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Propuesta Técnica</h3>
-                    <p class="text-gray-600 text-sm">Desarrollo de soluciones y presupuesto detallado</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        03
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Ejecución</h3>
-                    <p class="text-gray-600 text-sm">Implementación con supervisión continua</p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        04
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Entrega</h3>
-                    <p class="text-gray-600 text-sm">Finalización y documentación completa del proyecto</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Benefits -->
+    <section class="py-16 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Beneficios de Usar Red CORS</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 512 512"><path fill="#edce83" d="M446.93 303.162c-4.767-6.76-6.503-15.149-4.712-23.225a66.3 66.3 0 0 0 1.57-14.376c0-26.88-16.042-50.111-39.339-61.207c-5.232-2.492-9.655-6.421-12.498-11.47c-21.55-38.27-48.807-67.372-84.6-81.145c16.419-31.108 40.537-59.02 60.568-79.165C379.907 20.516 371.416 0 354.412 0H168.935c-16.949 0-25.422 20.37-13.582 32.498c18.479 18.928 39.89 45.296 54.169 76.837c-42.403 13.594-62.967 49.997-94.425 119.688c-3.236 7.169-9.285 12.663-16.707 15.268c-34.198 12.003-58.637 43.782-58.637 81.104c0 18.49 6.001 35.619 16.213 49.658c3.264 4.488 4.98 9.886 5.174 15.432c2.386 68.375 57.921 121.592 197.165 121.592c131.117 0 180.512-44.445 189.025-107.16c.51-3.755 1.66-7.402 3.571-10.673c7.321-12.532 11.504-27.017 11.504-42.451c-.001-18.042-5.712-34.788-15.475-48.631"/><path fill="#aa8f4d" d="M257.954 133.694c-14.867 0-28.824-1.189-39.3-3.348c-6.111-1.259-24.706-5.092-24.706-18.932a9.685 9.685 0 0 1 9.685-9.685c4.304 0 7.952 2.808 9.213 6.691c4.58 2.565 20.732 5.904 45.107 5.904c24.377 0 40.529-3.339 45.108-5.904c1.261-3.883 4.909-6.691 9.213-6.691a9.685 9.685 0 0 1 9.685 9.685c0 13.84-18.595 17.672-24.705 18.932c-10.475 2.158-24.432 3.348-39.3 3.348m23.953 98.917c12.506 2.426 22.662 7.557 31.331 15.02c1.97 1.696 2.165 4.688.481 6.668l-11.265 13.245c-1.635 1.922-4.469 2.204-6.498.702c-9.36-6.93-19.046-10.232-30.202-10.232c-12.56 0-20.468 5.35-20.468 14.886c0 9.768 5.815 13.723 29.772 21.166c29.307 9.304 46.054 21.631 46.054 50.008c0 22.674-14.447 40.037-39.482 46.404c-2.092.532-3.548 2.433-3.548 4.592v28.212a4.76 4.76 0 0 1-4.759 4.759h-17.23a4.76 4.76 0 0 1-4.759-4.759v-26.313c0-2.386-1.772-4.414-4.14-4.709c-18.275-2.272-32.347-9.238-42.761-18.163c-2.022-1.733-2.168-4.817-.375-6.787l12.572-13.814c1.688-1.855 4.514-2.059 6.483-.505c10.12 7.986 21.629 12.482 35.199 12.482c15.118 0 24.19-6.977 24.19-18.608c0-11.164-5.584-16.282-27.912-23.259c-34.889-10.7-47.217-25.12-47.217-47.915c0-22.555 16.187-38.383 40.168-43.286a4.745 4.745 0 0 0 3.793-4.648v-25.46a4.76 4.76 0 0 1 4.759-4.759h17.23a4.76 4.76 0 0 1 4.759 4.759v25.658a4.74 4.74 0 0 0 3.825 4.656"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Reducción de Costos</h3>
+                    <p class="text-gray-600">
+                        Elimina la necesidad de estaciones base propias, reduciendo costos de equipamiento y operación.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 36 36"><path fill="#aab8c2" d="M18 0C8.611 0 1 7.611 1 17h.029v17c0 1.1.9 2 2 2H33c1.1 0 2-.9 2-2V17c0-9.389-7.611-17-17-17"/><circle cx="18" cy="17" r="14" fill="#fff"/><path fill="#66757f" d="M18 4c7.18 0 13 5.82 13 13s-5.82 13-13 13S5 24.18 5 17S10.82 4 18 4m0-2C9.729 2 3 8.729 3 17s6.729 15 15 15s15-6.729 15-15S26.271 2 18 2"/><path fill="#292f33" d="M19 6a1 1 0 0 0-2 0v1a1 1 0 0 0 2 0zm0 21a1 1 0 0 0-2 0v1a1 1 0 0 0 2 0zM8 16H7a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2m21 0h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2m-2.293 8.293L26 23.586A.999.999 0 1 0 24.586 25l.707.707a.999.999 0 1 0 1.414-1.414M10 23.586l-.707.707a.999.999 0 1 0 1.414 1.414l.707-.707A.999.999 0 1 0 10 23.586M9.293 9.707l.707.707A.999.999 0 1 0 11.414 9l-.707-.707a.999.999 0 1 0-1.414 1.414M26 10.414l.707-.707a.999.999 0 1 0-1.414-1.414L24.586 9A.999.999 0 1 0 26 10.414"/><path fill="#dd2e44" d="M8.915 13.839a1 1 0 0 1 1.325-1.288l8.154 3.51a1 1 0 0 1-.791 1.837l-8.154-3.51a1 1 0 0 1-.534-.549"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Mayor Eficiencia</h3>
+                    <p class="text-gray-600">
+                        Trabajo inmediato sin configuración de equipos base, aumentando la productividad en campo.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g fill="none"><path fill="#fabc3d" d="M24 47.998c13.255 0 24-10.745 24-24C48 10.746 37.255 0 24 0S0 10.745 0 23.999s10.745 23.999 24 23.999"/><path fill="#df2c2c" d="M22.255 36.217c6.748 0 12.218-5.47 12.218-12.218S29.003 11.78 22.255 11.78S10.037 17.251 10.037 24s5.47 12.218 12.218 12.218"/><path fill="#f0f1f1" d="M22.255 32.726a8.727 8.727 0 1 0 0-17.454a8.727 8.727 0 1 0 0 17.454"/><path fill="#df2c2c" d="M22.254 29.235a5.237 5.237 0 1 0 0-10.473a5.237 5.237 0 0 0 0 10.473"/><path fill="#e2e4e5" d="M22.255 25.743a1.745 1.745 0 1 0 0-3.49a1.745 1.745 0 0 0 0 3.49"/><path fill="#fa5655" d="m30.925 15.394l-2.47 2.47a8.67 8.67 0 0 0-6.2-2.592a8.725 8.725 0 0 0-6.135 14.927l-2.47 2.47a12.18 12.18 0 0 1-3.613-8.67c0-6.746 5.472-12.218 12.218-12.218a12.18 12.18 0 0 1 8.67 3.613"/><path fill="#fff" d="m28.455 17.864l-2.465 2.465a5.2 5.2 0 0 0-3.735-1.566a5.235 5.235 0 0 0-5.237 5.236c0 1.462.598 2.788 1.567 3.735l-2.466 2.465a8.68 8.68 0 0 1-2.592-6.2a8.725 8.725 0 0 1 8.728-8.727c2.43 0 4.625.99 6.2 2.592"/><path fill="#fa5655" d="m25.99 20.329l-2.47 2.47a1.746 1.746 0 1 0-2.466 2.465l-2.47 2.47a5.2 5.2 0 0 1-1.566-3.735a5.235 5.235 0 0 1 5.236-5.236c1.462 0 2.789.597 3.736 1.566"/><path fill="#fff" d="m23.52 22.799l-.925.925a.439.439 0 1 0-.615.615l-.925.925a1.74 1.74 0 0 1-.056-2.52a1.746 1.746 0 0 1 2.521.055"/><path fill="#3e3e3f" d="M22.254 23.999c.519.346 1.433.775 2.619 1.122v-2.245c-1.213.356-2.127.795-2.619 1.123"/><path fill="#facb1b" d="M24.873 22.876v2.245a15.6 15.6 0 0 0 2.181.468v-3.18q-1.107.155-2.181.467"/><path fill="#818284" d="M24.873 22.876c-1.213.356-2.127.795-2.619 1.123h2.619z"/><path fill="#3e3e3f" d="M37.964 19.199c-4.071 0-5.902 2.248-6.673 3.19a17 17 0 0 0-2.054-.136c-.73 0-1.46.053-2.182.156v3.179a15.6 15.6 0 0 0 4.236.02c.77.94 2.6 3.19 6.673 3.19c0-1.6-.28-3.137-1.906-4.8c1.626-1.662 1.906-3.2 1.906-4.8"/><path fill="#818284" d="M36.058 23.998c1.626-1.662 1.906-3.2 1.906-4.8c-4.072 0-5.902 2.25-6.673 3.19a15.6 15.6 0 0 0-4.236.02v1.59z"/><path fill="#fbe158" d="M27.055 24v-1.59a15.5 15.5 0 0 0-2.182.466V24z"/></g></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Mayor Precisión</h3>
+                    <p class="text-gray-600">
+                        Correcciones de múltiples estaciones garantizan la máxima precisión y confiabilidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- CTA -->
     <section class="py-16 bg-slate-800 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">¿Listo para iniciar tu proyecto?</h2>
-            <p class="text-xl mb-8 opacity-90">Contáctanos para una consulta gratuita</p>
+            <h2 class="text-3xl font-bold mb-4">¿Necesitas acceso a la Red CORS?</h2>
+            <p class="text-xl mb-8 opacity-90">Contáctanos para información sobre suscripciones y servicios</p>
             <a href="https://wa.me/59170516064?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20por%20favor." 
     target="_blank"  class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 text-lg rounded-md transition duration-300">
                 Solicitar Consulta
