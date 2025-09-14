@@ -56,25 +56,27 @@ onBeforeUnmount(() => {
 
 <template>
     <nav class="bg-slate-800 border-b border-emerald-300/20 sticky w-full z-80 top-0 start-0">
-        <div class="flex flex-wrap items-center justify-between mx-auto">
-
-            <a href="/" class="px-4 lg:px-6 py-3 bg-slate-800 md:py-3 flex items-center justify-center md:justify-start">
-                <div class="flex items-center space-x-3">
+        
+      <div class="flex flex-wrap items-center justify-between mx-auto">
+            
+            <a href="/" class="py-2 px-4 lg:px-12 bg-slate-800  flex items-center justify-center md:justify-start">
+              <div class="flex items-center space-x-3">
                     <img :src="logo.src" alt="Canaan Inmobiliaria" class="w-20" />
                 </div>
             </a>
 
-            <div class="flex md:order-2 space-x-1 justify-center items-center md:space-x-0 rtl:space-x-reverse px-4">
+            <div class="flex md:order-2 space-x-1 gap-1 justify-center items-center md:space-x-0 rtl:space-x-reverse px-3">
                 <button type="button"
-                    class="text-slate-800 flex gap-2 justify-center items-center bg-yellow-500 cursor-pointer border-2 border-yellow-400 hover:text-slate-950 font-medium rounded-lg text-lg px-4 py-2 text-center">
+                    class="text-slate-800 flex gap-1 justify-center items-center bg-yellow-500 cursor-pointer border-2 border-yellow-400 hover:text-slate-950 font-medium rounded-lg text-lg px-4 py-1 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                         <path fill="currentColor"
                             d="M3 11h8V3H3zm2-6h4v4H5zM3 21h8v-8H3zm2-6h4v4H5zm8-12v8h8V3zm6 6h-4V5h4zm-5.99 4h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm4 0h2v2h-2zm2 2h2v2h-2zm-4 0h2v2h-2zm2-6h2v2h-2zm2 2h2v2h-2z" />
                     </svg>
                     Pagar
                 </button>
-                <button class="text-white p-1 cursor-pointer hover:text-slate-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a5 5 0 1 1-5 5l.005-.217A5 5 0 0 1 12 2m2 12a5 5 0 0 1 5 5v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1a5 5 0 0 1 5-5z"/></svg>
+                <button class="flex gap-1 text-slate-800 bg-white rounded-md justify-center items-center  py-1 px-2 text-sm font-semibold cursor-pointer hover:text-slate-900 hover:bg-slate-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path fill="#ffc107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917"/><path fill="#ff3d00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691"/><path fill="#4caf50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44"/><path fill="#1976d2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"/></svg>
+                  <span class="hidden lg:flex">Ingresar</span> 
                 </button>
 
                 <button @click="isMenuOpen = !isMenuOpen" type="button"
@@ -89,11 +91,11 @@ onBeforeUnmount(() => {
             </div>
 
             <div  :class="[
-                'items-center justify-between bg-slate-900 px-4 py-3 rounded-md w-full md:flex md:w-auto md:order-1 transition-all duration-300',
+                'items-center justify-between bg-slate-900 px-3 py-3 rounded-md w-full md:flex md:w-auto md:order-1 transition-all duration-300',
                 isMenuOpen ? 'flex' : 'hidden'
             ]" id="mega-menu-full">
                 <ul
-                    class="flex flex-col justify-center items-start md:items-center p-4 md:p-0 mt-1 gap-3 font-medium md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    class="flex flex-col justify-center items-start md:items-center p-3 md:p-0  gap-1 lg:gap-3 font-medium md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                     <li>
                         <button  @click="scrollToSection('inicio')" :class="[
                             'transition-all duration-300 cursor-pointer font-semibold text-sm tracking-wider uppercase',
