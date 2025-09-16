@@ -37,14 +37,10 @@ const { title, category } = Astro.params;
       class=" w-full flex justify-between items-center   "
     >
       <h1
-        class="font-bold flex flex-col md:flex-row w-full justify-start items-start   md:gap-1"
+        class="font-bold flex flex-col md:flex-row w-full justify-start items-start lg:items-center md:gap-1"
       >
-        <span class="block text-xl text-slate-100"
-          >Urbanizaciones</span
-        >
-        <span class="block text-xl  text-amber-400"
-          >Disponibles</span
-        >
+        <span class="block text-2xs lg:text-xs text-slate-100 px-2 py-1 bg-slate-800 rounded-full">Urbanizaciones y Viviendas</span>
+        <span class="block text-xl text-amber-400 px-2">Disponibles</span>
       </h1>
       <div class="w-[40vh] z-20">
         <SelectDepartament active={true} />
