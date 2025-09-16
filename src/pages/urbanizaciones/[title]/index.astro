@@ -16,13 +16,13 @@ import vidsantacruz from "../../../assets/videos/vidsantacruz.webm";
 
 export function getStaticPaths() {
   return [
-    { params: { title: 'lapaz',urbanizacion:''} },
-    { params: { title: 'cochabamba',urbanizacion:''} },
-    { params: { title: 'santacruz',urbanizacion:''} },
+    { params: { title: 'lapaz',category:''} },
+    { params: { title: 'cochabamba',category:''} },
+    { params: { title: 'santacruz',category:''} },
   ];
 }
 
-const { title, urbanizacion } = Astro.params;
+const { title, category } = Astro.params;
 
 ---
 
@@ -47,7 +47,7 @@ const { title, urbanizacion } = Astro.params;
         >
       </h1>
       <div class="w-[40vh] z-20">
-        <SelectDepartament active={true} client:load/>
+        <SelectDepartament active={true} />
       </div>
       
         

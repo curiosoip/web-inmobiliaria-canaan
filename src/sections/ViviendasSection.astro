@@ -1,9 +1,9 @@
 ---
-import CardComponent from "../components/CardComponent.astro"
+import CardViviendaComponent from "../components/CardViviendaComponent.astro";
 
-import achumani from "../assets/imgs/achumani.jpg";
-import irpavi from "../assets/imgs/irpavi.jpg";
-import calacoto from "../assets/imgs/calacoto.jpg";
+import ventadepa from "../assets/imgs/ventadepa.jpg";
+import ventacasa from "../assets/imgs/ventacasa.jpg";
+import ventaduplex from "../assets/imgs/ventaduplex.jpg";
 
 import SelectTypeComponent from "../components/SelectTypeComponent.astro";
 
@@ -23,26 +23,27 @@ const {title}=Astro.params
   </div>
   <div class="flex w-full bg-slate-50 justify-between items-center mb-10 px-4 py-1 rounded-full max-w-6xl mx-auto">
     <SelectTypeComponent active={true} />
-    <h1 class="text-sm font-bold text-slate-700">25 Urbanizaciones</h1>
+    <h1 class="text-sm font-bold  text-slate-700">125 Viviendas</h1>
   </div>
   <div class="flex flex-col lg:flex-row w-full max-w-6xl justify-center mx-auto gap-10 items-center pb-10">
-    <CardComponent 
-      img={achumani.src}
-      ciudad={title}
-      titleUrbanizacion="Achumani" 
-      descripcion="Lote urbanizado de 500 m², con excelente ubicación y acceso a servicios básicos. Ideal para construir tu vivienda familiar o inversión." 
-    />
-    <CardComponent 
-      img={irpavi.src}
-      ciudad={title}
-      titleUrbanizacion="Irpavi" 
-      descripcion="Amplio lote de 450 m² en urbanización segura y bien conectada. Cercano a comercios y transporte, perfecto para proyectos residenciales." 
-    />
-    <CardComponent 
-      img={calacoto.src}
-      ciudad={title}
-      titleUrbanizacion="Calacoto" 
-      descripcion="Lote de 600 m² en zona premium, con infraestructura moderna y áreas verdes cercanas. Ideal para construir un hogar cómodo y seguro." 
-    />
+    <CardViviendaComponent 
+        img={ventadepa.src}
+        tipo="Departamento"
+        precio="$ 45.000"
+        descripcion="Departamento moderno con excelente iluminación natural, balcón con vista panorámica y acceso rápido a comercios y transporte." 
+        />
+        <CardViviendaComponent 
+        img={ventacasa.src}
+        tipo="Casa"
+        precio="$ 165.000"
+        descripcion="Casa espaciosa en urbanización segura, con jardín amplio, estacionamiento privado y cercanía a colegios y supermercados." 
+        />
+        <CardViviendaComponent 
+        img={ventaduplex.src}
+        tipo="Duplex"
+        precio="$ 34.800"
+        descripcion="Duplex elegante con acabados de calidad, áreas verdes comunes, entorno tranquilo y fácil acceso a vías principales." 
+        />
+
   </div>
 </section>
