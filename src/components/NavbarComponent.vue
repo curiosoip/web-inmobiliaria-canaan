@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
 <template>
     <nav class="bg-slate-800 border-b border-emerald-300/20 sticky w-full z-80 top-0 start-0">
         
-      <div class="flex flex-wrap items-center justify-between mx-auto">
+      <div class="flex flex-wrap items-center justify-between mx-auto max-w-8xl">
             
             <a href="/" class="py-2 px-4 lg:px-12 bg-slate-800  flex items-center justify-center md:justify-start">
               <div class="flex items-center space-x-3">
