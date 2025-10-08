@@ -1,0 +1,66 @@
+---
+const { img, ciudad, titleUrbanizacion, descripcion } = Astro.props
+const { title } = Astro.params
+import PlanimetriaMapComponent from "./PlanimetriaMapComponent.vue"
+---
+<div class="flex relative flex-col w-full max-w-sm mx-4 pb-5 border border-slate-50
+            bg-gradient-to-t from-white via-slate-100 to-white 
+            rounded-4xl shadow-sm overflow-visible">
+   <div class="flex items-center justify-center mb-2 relative transform -rotate-2 bg-slate-800 px-4   rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 -translate-y-2 mr-2 text-amber-500" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 14v-4c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172S21 6.229 21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172S3 17.771 3 14Z"/><path stroke-linecap="round" d="M8 18h8"/><path stroke-linecap="round" stroke-linejoin="round" d="M7.05 6.977h9.907m-4.942 0v7.006m0 0h-.533m.533 0h.526M8.016 7.965c-.726.745-1.928 2.031-1.402 3.103c.467.951 1.131.968 1.401.968s.973-.017 1.44-.968c.526-1.072-.714-2.358-1.44-3.103m7.966 0c-.725.745-1.927 2.031-1.402 3.103c.467.951 1.132.968 1.402.968s.973-.017 1.44-.968c.526-1.072-.714-2.358-1.44-3.103"/></g></svg>
+    
+        <h5 class="text-md font-extrabold text-center text-slate-100 transform rotate-1 tracking-tight">
+            {titleUrbanizacion}
+        </h5>
+    </div>
+    <div class="flex w-full justify-center items-center gap-2 text-sm font-semibold text-slate-700 px-4 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32"><path fill="#dc7a7a" d="M27.4 5.5h-9.2l-2.1 4.2H4.3v16.8h25.2v-21Zm0 18.7H6.6V11.8h20.8Zm0-14.5h-8.2l1-2.1h7.1v2.1Z"/><path fill="#dc7a7a" d="M4.3 26.5h25.2l-3.8-12.8H.5z"/><path fill="#808080" d="M15.266 11.311v18.375h14.449v-15.1h-3.6v-3.275zm12.146.813l.008 1.158h1.252l-1.26-1.16Z"/><path fill="#c5c5c5" d="M27.028 10H15.281a1.316 1.316 0 0 0-1.312 1.313v18.375A1.316 1.316 0 0 0 15.281 31h14.438a1.316 1.316 0 0 0 1.313-1.312V13.642Zm.394 2.133l1.247 1.148h-1.247ZM15.281 29.688V11.313h10.828v3.281h3.609v15.094Z"/><path fill="#c5c5c5" d="M16.594 19.372h11.813v1.313H16.594zm1.842-6.8a1.4 1.4 0 0 0-.558-.394a2.05 2.05 0 0 0-.82-.131h-1.28v3.839h1.28a1.66 1.66 0 0 0 1.313-.492a1.8 1.8 0 0 0 .361-.591a3 3 0 0 0 .1-.82a3 3 0 0 0-.1-.788a1.6 1.6 0 0 0-.296-.623m-.459 1.837a1 1 0 0 1-.164.394a.8.8 0 0 1-.3.262a1.1 1.1 0 0 1-.492.1H16.6v-2.429h.459a.87.87 0 0 1 .722.3a1.2 1.2 0 0 1 .164.361a2.6 2.6 0 0 1 .066.525a2.2 2.2 0 0 1-.035.488Zm4.002-1.837a1.4 1.4 0 0 0-.525-.427a1.7 1.7 0 0 0-.755-.164a2 2 0 0 0-.788.164a1.7 1.7 0 0 0-.525.427a2.2 2.2 0 0 0-.3.623a2.94 2.94 0 0 0 0 1.509a1.8 1.8 0 0 0 .3.623a1.13 1.13 0 0 0 .525.427a1.9 1.9 0 0 0 .788.164a1.42 1.42 0 0 0 1.214-.525a2.1 2.1 0 0 0 .427-1.444a2.8 2.8 0 0 0-.1-.755a1.33 1.33 0 0 0-.261-.622M21.29 14.9a.7.7 0 0 1-.623.328a.64.64 0 0 1-.623-.328a1.87 1.87 0 0 1-.2-.952a1.8 1.8 0 0 1 .2-.952a.806.806 0 0 1 1.247 0a1.87 1.87 0 0 1 .2.952a1.8 1.8 0 0 1-.201.952m3.41-.031a.7.7 0 0 1-.131.164a.7.7 0 0 1-.2.131a.6.6 0 0 1-.263.033a.575.575 0 0 1-.558-.3a1.8 1.8 0 0 1-.2-.952v-.262c0-.1.033-.2.033-.3c.033-.1.033-.2.066-.263a.53.53 0 0 1 .131-.23a1 1 0 0 1 .2-.164a.6.6 0 0 1 .263-.066a.57.57 0 0 1 .427.164a1.1 1.1 0 0 1 .23.394l.755-.2a1.6 1.6 0 0 0-.23-.525a1.6 1.6 0 0 0-.328-.328a1.88 1.88 0 0 0-1.608-.033a1.55 1.55 0 0 0-.492.427a1.3 1.3 0 0 0-.164.656a2.7 2.7 0 0 0-.066.722a5 5 0 0 0 .066.722a1.8 1.8 0 0 0 .262.623a1.2 1.2 0 0 0 .492.427a1.7 1.7 0 0 0 .755.164a1.6 1.6 0 0 0 .919-.262a1.6 1.6 0 0 0 .328-.328a3.3 3.3 0 0 0 .263-.492l-.788-.2a.9.9 0 0 1-.162.278m-8.106 12.936h8.203v1.313h-8.203zm0-2.533h11.813v1.313H16.594zm0-3h11.813v1.313H16.594zm.055-5.8h11.813v1.313H16.649z"/></svg>
+        {descripcion}
+    </div>
+   
+    <button type="button"
+    data-modal-target=`urbanizacion-modal-${titleUrbanizacion}`
+    data-modal-toggle=`urbanizacion-modal-${titleUrbanizacion}`
+       class="absolute -bottom-5 left-1/2 cursor-pointer transform -translate-x-1/2 text-white flex gap-2 w-50  justify-center items-center bg-amber-400 hover:bg-amber-500 font-medium rounded-full text-sm px-4 py-2 shadow-md">
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M3 2.5a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h5.25a.75.75 0 0 1 0 1.5H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6.25a.75.75 0 0 1-1.5 0V3a.5.5 0 0 0-.5-.5zm12.28 8.72a.75.75 0 0 1 0 1.06l-2.5 2.5a.75.75 0 0 1-1.06 0l-1-1a.75.75 0 1 1 1.06-1.06l.47.47l1.97-1.97a.75.75 0 0 1 1.06 0M4.75 4a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5zM4 8a.75.75 0 0 1 .75-.75h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 4 8m.75 2.5a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/></svg>
+       Ver requisitos
+  </button>
+</div>
+<div id=`urbanizacion-modal-${titleUrbanizacion}` tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-100 justify-center items-center  w-full md:inset-0 h-[calc(100%-1rem)] ">
+    <div class="relative p-4 w-full max-w-5xl max-h-full">
+        <div class="relative bg-slate-50  rounded-lg shadow-sm dark:bg-gray-700">
+            <div class="flex bg-slate-900 items-center justify-between p-4 md:p-5  rounded-t-lg border border-slate-600">
+                <h3 class="flex gap-2 justify-start items-center text-sm font-semibold text-gray-600 dark:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-slate-100" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M4 4h4v10H4zm0 16v-4h4v4zm16 0H10V10h10zm0-12H10V4h10z"/></svg>  
+                  <strong class="text-2xl text-amber-400 font-bold">{title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong> <h4 class="text-white ml-2 text-xs font-semibold "> / {titleUrbanizacion} </h4> 
+                </h3>
+                <button type="button" class="text-gray-400 cursor-pointer bg-transparent hover:text-gray-500  rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide=`urbanizacion-modal-${titleUrbanizacion}`>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+               
+            </div>
+            <div class=" max-h-[70vh]">
+              <div class="h-[50vh]">
+                <PlanimetriaMapComponent client:load />
+              </div>
+            </div>
+            
+            <div class="flex w-full  justify-between items-center p-1 border-t border-gray-200 rounded-b ">
+              <div class="flex flex-col gap-3 md:flex-row  justify-center md:justify-between items-center w-full px-4 py-2">
+              <header class="flex gap-1 justify-center items-center">
+                <span class="flex flex-col  justify-center items-center bg-green-100 text-green-800 text-xs font-medium  p-2 rounded-sm dark:bg-green-900 dark:text-green-300"><strong class="text-lg">12</strong>disponibles</span>
+                <span class="flex flex-col  justify-center items-center bg-yellow-100 text-yellow-800 text-xs font-medium p-2 rounded-sm dark:bg-yellow-900 dark:text-yellow-300"><strong class="text-lg">5</strong> En Crédito</span>
+                <span class="flex flex-col justify-center items-center bg-red-100 text-red-800 text-xs font-medium p-2 rounded-sm dark:bg-red-900 dark:text-red-300"><strong class="text-lg">8</strong> Ocupados</span>
+              </header>
+              <footer class="text-2xl text-slate-700 font-bold">
+                25 Urbanizaciones
+              </footer>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

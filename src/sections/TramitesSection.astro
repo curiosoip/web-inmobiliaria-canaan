@@ -1,0 +1,48 @@
+---
+import CardComponentTramite from "../components/CardComponentTramite.astro";
+import achumani from "../assets/imgs/achumani.jpg";
+import irpavi from "../assets/imgs/irpavi.jpg";
+import calacoto from "../assets/imgs/calacoto.jpg";
+
+import SelectTypeComponent from "../components/SelectTypeComponent.astro";
+
+const {title}=Astro.params
+
+---
+<section id="servicios" class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
+
+
+  <div class="relative z-10 flex w-full justify-center items-center flex-col text-center mb-6 sm:mb-16 lg:mb-20">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold max-w-3xl text-slate-800 mb-4 sm:mb-6 tracking-tight">
+        REALIZA TU TRÁMITE DIRECTO EN <strong class="text-amber-400">{title=="lapaz"?"LA PAZ":title=="cochabamba"?"COCHABAMBA":"SANTA CRUZ"}</strong>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+        Evita complicaciones y realiza tus trámites legales <strong>con nuestro equipo en {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong>.
+        Regularizamos con rapidez y respaldo profesional. 
+      </p>
+  </div>
+  <div class="flex w-full bg-amber-400/10 justify-between items-center mb-10 px-4 py-1 rounded-full max-w-6xl mx-auto">
+    <p class="text-sm text-red-400 font-semibold">Debes iniciar sesión para solicitar tu nuevo trámite</p>
+    <h1 class="text-sm font-bold text-slate-700">10 Tipos de Trámites</h1>
+  </div>
+  <div class="flex flex-col lg:flex-row w-full max-w-6xl justify-center mx-auto gap-10 items-center pb-10">
+    <CardComponentTramite 
+        ciudad={title}
+        titleUrbanizacion="Derechos Reales" 
+        descripcion="Registro legal de tu propiedad ante la institución oficial para garantizar la titularidad y respaldo jurídico de tu lote o vivienda." 
+        />
+
+        <CardComponentTramite 
+        ciudad={title}
+        titleUrbanizacion="Catastro Municipal" 
+        descripcion="Inscripción de tu inmueble ante el municipio correspondiente para definir superficie, ubicación y valor catastral actualizado." 
+        />
+
+        <CardComponentTramite 
+        ciudad={title}
+        titleUrbanizacion="Folio Real y Certificaciones" 
+        descripcion="Obtén el folio real y certificaciones de tu propiedad para verificar su legalidad, historial de titularidad y ausencia de gravámenes." 
+        />
+
+  </div>
+</section>

@@ -168,6 +168,16 @@ onBeforeUnmount(() => {
           </span>
         </a>
       </li>
+      <li>
+        <a href="/tramites/lapaz/" class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
+          <div class="text-amber-400 font-bold flex gap-2 items-center">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 13h6q.425 0 .713-.288T16 12t-.288-.712T15 11H9q-.425 0-.712.288T8 12t.288.713T9 13m0 3h6q.425 0 .713-.288T16 15t-.288-.712T15 14H9q-.425 0-.712.288T8 15t.288.713T9 16m0 3h3q.425 0 .713-.288T13 18t-.288-.712T12 17H9q-.425 0-.712.288T8 18t.288.713T9 19m-3 3q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h7.175q.4 0 .763.15t.637.425l4.85 4.85q.275.275.425.638t.15.762V20q0 .825-.587 1.413T18 22zm7-14q0 .425.288.713T14 9h4l-5-5z"/></svg>
+TRÁMITES LEGALES</div>
+          <span class="text-xs text-white">
+            Asesoramiento y gestión de documentos legales para compra, venta y regularización de bienes inmuebles.
+          </span>
+        </a>
+      </li>
     </ul>
     <ul>
       <li>
@@ -190,7 +200,19 @@ onBeforeUnmount(() => {
           </span>
         </a>
       </li>
+        <li>
+        <div class="block p-3 rounded-lg ">
+          <div class="text-slate-400 font-bold flex flex-col lg:flex-row gap-2 items-start lg:items-center">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 0H14a2.9 2.9 0 0 0-2.06.85L.5 12.29a1.71 1.71 0 0 0 0 2.42l8.79 8.79a1.71 1.71 0 0 0 2.42 0l11.44-11.44A2.9 2.9 0 0 0 24 10V1.5A1.5 1.5 0 0 0 22.5 0m-8.31 10.71c.56 2.09 1.09 4.07 0 5.2a2.83 2.83 0 0 1-4.06 0a.24.24 0 0 0-.35 0l-.78.78a1 1 0 0 1-.71.29a1 1 0 0 1-.71-1.7l.79-.79a.24.24 0 0 0 0-.35L7 12.79a1 1 0 0 1 1.41-1.41l3.12 3.12a.86.86 0 0 0 1.24 0c.32-.32-.24-2.39-.47-3.27c-.56-2.09-1.09-4.06 0-5.19a2.72 2.72 0 0 1 4.07 0a.24.24 0 0 0 .35 0l.78-.78a1 1 0 0 1 1.42 0a1 1 0 0 1 0 1.41l-.78.78a.24.24 0 0 0 0 .36l1.33 1.34a1 1 0 0 1 0 1.41a1 1 0 0 1-1.41 0L15 7.45a.76.76 0 0 0-1.24 0c-.36.32.24 2.38.43 3.26"/></svg>            INVERSIÓN INMOBILIARIA             <span class="text-white bg-slate-950 px-2 mb-2 lg:mb-0 lg:px-3 py-1 rounded-full flex justify-center items-center text-xs">Próximamente</span> 
+</div>
+          <span class="text-xs text-white">
+            Oportunidades seguras y rentables para invertir en terrenos y proyectos urbanísticos con asesoría experta.
+          </span>
+        </div>
+      </li>
     </ul>
+   
+    
   </div>
 </div>
     </nav>
