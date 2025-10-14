@@ -24,13 +24,14 @@ const { title, tramites } = Astro.props as {
   title: string; 
   tramites: Tramite[];
 };
+const safeTramites = tramites ?? [];
 ---
 
 <section id="tramites" class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
   <div class="flex flex-col lg:flex-row w-full max-w-6xl justify-center mx-auto gap-10 items-center pb-10">
     <section id="tramites" class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
   <div class="flex flex-col lg:flex-row w-full max-w-6xl justify-center mx-auto gap-10 items-center pb-10">
-    {tramites.length > 0 ? (
+    {safeTramites.length > 0 ? (
       tramites.map((tramite: Tramite) => (
         <CardComponentTramite 
           ciudad={title}
