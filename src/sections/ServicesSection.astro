@@ -3,11 +3,36 @@ import lost from "../assets/videos/lost.webm";
 import consulting from "../assets/videos/consulting.webm";
 import imports from "../assets/videos/imports.webm";
 import redcors from "../assets/videos/redcors.webm";
+
+function slugify(text:string) {
+  return text
+    ?.toLowerCase()
+    .replace(/\s+/g, '')                 // quita espacios
+    .normalize('NFD')                    // separa acentos
+    .replace(/[\u0300-\u036f]/g, '')     // elimina acentos
+    .replace(/[^a-z0-9\-]/g, '');        // limpia caracteres raros
+}
+
+// ⚡ Hacer fetch del lado del servidor (solo una vez al renderizar)
+let departamentos = [];
+try {
+  const res = await fetch("https://canaan-inmobiliaria-admin.up.railway.app/api/departamentos/");
+  if (res.ok) {
+    departamentos = await res.json();
+  } else {
+    console.error("Error al obtener departamentos");
+  }
+} catch (err) {
+  console.error("Error:", err);
+}
+
+const firstDept = departamentos[0] ? slugify(departamentos[0].nombre) : "lapaz";
+
 const services = [
   {
     id: 1,
     title: "VENTA DE LOTES Y VIVIENDAS",
-	url:"/urbanizaciones/lapaz/lotes/",
+	url:`/urbanizaciones/${firstDept}/lotes/`,
     video: lost,
 	poster: "/src/assets/imgs/lost.jpg",
     bg: "bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200 group-hover:border-amber-400 group-hover:shadow-amber-500/20",

@@ -8,6 +8,23 @@ import UrbanizacionesSection from "../../../sections/UrbanizacionesSection.astro
 import NavbarComponent from "../../../components/NavbarComponent.vue";
 import ViviendasSection from "../../../sections/ViviendasSection.astro";
 
+import SelectTypeComponent from "../../../components/SelectTypeComponent.astro";
+const { title, category } = Astro.params;
+
+let departamentos: any[] = [];
+
+try {
+  const res = await fetch("https://canaan-inmobiliaria-admin.up.railway.app/api/departamentos/");
+  if (res.ok) {
+    departamentos = await res.json();
+  } else {
+    console.error("Error al obtener departamentos");
+  }
+} catch (err) {
+  console.error("Error:", err);
+}
+
+
 export async function getStaticPaths() {
   const pages = [
     { title: "lapaz", category: "lotes" },
@@ -21,12 +38,28 @@ export async function getStaticPaths() {
   return pages.map((item) => ({
     params: {
       title: item.title,
-      category: item.category, // 👈 ya no array, string
+      category: item.category, 
     },
   }));
 }
 
-const { title, category } = Astro.params;
+
+
+function slugify(text: string) {
+  return text
+    ?.toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+const departamentoActual = departamentos.find(
+  (dep) => slugify(dep.nombre) === title
+);
+
+
+
 ---
 
 <MainLayout>
@@ -44,13 +77,25 @@ const { title, category } = Astro.params;
         <span class="block text-xl text-amber-400 px-2">Disponibles</span>
       </h1>
       <div class="w-[40vh] z-20">
-        <SelectDepartament active={true} />
+        <SelectDepartament departamentos={departamentos} active={true} />
       </div>
     </div>
   </section>
+  <div class="relative z-10 flex pt-10 w-full justify-center items-center flex-col text-center mb-6 sm:mb-16 lg:mb-20">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold max-w-3xl text-slate-800 mb-4 sm:mb-6 tracking-tight">
+        ENCUENTRA TU LUGAR IDEAL EN <strong class="text-amber-400">{title=="lapaz"?"LA PAZ":title=="cochabamba"?"COCHABAMBA":"SANTA CRUZ"}</strong>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+        Lotes urbanizados y viviendas en <strong>las mejores zonas de {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong>  con servicios básicos y financiamiento accesible
+      </p>
+  </div>
+  <div class="flex w-full border border-gray-300 justify-between items-center mb-10 pl-2 pr-4 py-1 rounded-full max-w-6xl mx-auto">
+    <SelectTypeComponent departamentos={departamentos} active={true} />
+    <h1 class="text-md font-bold text-slate-700">25 Urbanizaciones</h1>
+  </div>
 
-  {category === "lotes" && <UrbanizacionesSection />}
-  {category === "viviendas" && <ViviendasSection />}
+  {category === "lotes" && <UrbanizacionesSection urbanizaciones={departamentoActual.urbanizaciones} />}
+  {category === "viviendas" && <ViviendasSection viviendas={departamentoActual.viviendas}  />}
 
   
   <FooterSection />

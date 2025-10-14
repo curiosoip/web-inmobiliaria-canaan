@@ -7,12 +7,29 @@ const isMenuOpen = ref(false)
 const pathname = ref("");
 const isMegaOpen = ref(false)
 
+const departamentos = ref([]) // almacenará la respuesta de la API
+const loadingDepartamentos = ref(false)
+const errorDepartamentos = ref(null)
+
 function toggleMegaMenu() {
   activeSection.value="servicios"
   isMegaOpen.value = !isMegaOpen.value
 }
 
-
+async function fetchDepartamentos() {
+  loadingDepartamentos.value = true
+  errorDepartamentos.value = null
+  try {
+    const res = await fetch("https://canaan-inmobiliaria-admin.up.railway.app/api/departamentos/")
+    if (!res.ok) throw new Error("Error al obtener departamentos")
+    const data = await res.json()
+    departamentos.value = data
+  } catch (err) {
+    errorDepartamentos.value = err.message
+  } finally {
+    loadingDepartamentos.value = false
+  }
+}
 
 function scrollToSection(id) {
   
@@ -46,7 +63,7 @@ onMounted(() => {
 
     sections.forEach((sec) => observer.observe(sec))
   
-   
+   fetchDepartamentos()
 })
 
 onBeforeUnmount(() => {
@@ -149,7 +166,7 @@ onBeforeUnmount(() => {
   <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
     <ul>
       <li>
-        <a href="/urbanizaciones/lapaz/lotes/" class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
+        <a v-if="departamentos.length > 0"  :href="`/urbanizaciones/${departamentos[0].nombre.toLowerCase().replace(/\s+/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')}/lotes/`" class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
           <div class=" text-amber-400 font-bold flex gap-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.398 17.804C13.881 17.034 19 14.016 19 9A7 7 0 1 0 5 9c0 5.016 5.119 8.035 6.602 8.804a.86.86 0 0 0 .796 0M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6" clip-rule="evenodd"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.062 16.5c.615.456.938.973.938 1.5s-.323 1.044-.938 1.5c-.614.456-1.498.835-2.562 1.098S13.229 21 12 21s-2.436-.139-3.5-.402s-1.948-.642-2.562-1.098C5.323 19.044 5 18.527 5 18s.323-1.044.938-1.5"/></g></svg>
             VENTA DE LOTES Y VIVIENDAS</div>
@@ -169,7 +186,7 @@ onBeforeUnmount(() => {
         </a>
       </li>
       <li>
-        <a href="/tramites/lapaz/" class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
+        <a  v-if="departamentos.length > 0"  :href="`/tramites/${departamentos[0].nombre.toLowerCase().replace(/\s+/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')}/`" class="block p-3 rounded-lg hover:bg-slate-950 dark:hover:bg-gray-700">
           <div class="text-amber-400 font-bold flex gap-2 items-center">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 13h6q.425 0 .713-.288T16 12t-.288-.712T15 11H9q-.425 0-.712.288T8 12t.288.713T9 13m0 3h6q.425 0 .713-.288T16 15t-.288-.712T15 14H9q-.425 0-.712.288T8 15t.288.713T9 16m0 3h3q.425 0 .713-.288T13 18t-.288-.712T12 17H9q-.425 0-.712.288T8 18t.288.713T9 19m-3 3q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h7.175q.4 0 .763.15t.637.425l4.85 4.85q.275.275.425.638t.15.762V20q0 .825-.587 1.413T18 22zm7-14q0 .425.288.713T14 9h4l-5-5z"/></svg>
 TRÁMITES LEGALES</div>

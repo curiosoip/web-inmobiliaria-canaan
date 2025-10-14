@@ -1,48 +1,37 @@
 ---
-import CardComponent from "../components/CardComponent.astro"
+import CardComponent from "../components/CardComponent.astro";
 
-import achumani from "../assets/imgs/achumani.jpg";
-import irpavi from "../assets/imgs/irpavi.jpg";
-import calacoto from "../assets/imgs/calacoto.jpg";
+const { title } = Astro.params;
+const { urbanizaciones = [] }: { urbanizaciones?: Urbanizacion[] } = Astro.props;
 
-import SelectTypeComponent from "../components/SelectTypeComponent.astro";
-
-const {title}=Astro.params
-
+interface Urbanizacion {
+  id_urbanizacion: string;
+  nombre: string;
+  descripcion: string;
+  portada_url: string;
+  direccion?: string;
+  total_lotes?: number;
+  total_manzanas?: number;
+  area_total?: number;
+  fecha_registro?: string;
+  fecha_actualizacion?: string;
+  vertices?: any[];
+  lotes?: any[];
+}
 ---
 <section id="servicios" class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
-
-
-  <div class="relative z-10 flex w-full justify-center items-center flex-col text-center mb-6 sm:mb-16 lg:mb-20">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold max-w-3xl text-slate-800 mb-4 sm:mb-6 tracking-tight">
-        ENCUENTRA TU LUGAR IDEAL EN <strong class="text-amber-400">{title=="lapaz"?"LA PAZ":title=="cochabamba"?"COCHABAMBA":"SANTA CRUZ"}</strong>
-      </h2>
-      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-        Lotes urbanizados y viviendas en <strong>las mejores zonas de {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong>  con servicios básicos y financiamiento accesible
-      </p>
-  </div>
-  <div class="flex w-full bg-slate-50 justify-between items-center mb-10 px-4 py-1 rounded-full max-w-6xl mx-auto">
-    <SelectTypeComponent active={true} />
-    <h1 class="text-md font-bold text-slate-700">25 Urbanizaciones</h1>
-  </div>
   <div class="flex flex-col lg:flex-row w-full max-w-6xl justify-center mx-auto gap-10 items-center pb-10">
-    <CardComponent 
-      img={achumani.src}
-      ciudad={title}
-      titleUrbanizacion="Achumani" 
-      descripcion="Lote urbanizado de 500 m², con excelente ubicación y acceso a servicios básicos. Ideal para construir tu vivienda familiar o inversión." 
-    />
-    <CardComponent 
-      img={irpavi.src}
-      ciudad={title}
-      titleUrbanizacion="Irpavi" 
-      descripcion="Amplio lote de 450 m² en urbanización segura y bien conectada. Cercano a comercios y transporte, perfecto para proyectos residenciales." 
-    />
-    <CardComponent 
-      img={calacoto.src}
-      ciudad={title}
-      titleUrbanizacion="Calacoto" 
-      descripcion="Lote de 600 m² en zona premium, con infraestructura moderna y áreas verdes cercanas. Ideal para construir un hogar cómodo y seguro." 
-    />
+    {urbanizaciones.length > 0 ? (
+      urbanizaciones.map((urb: Urbanizacion) => (
+        <CardComponent 
+          img={urb.portada_url} 
+          ciudad={title} 
+          titleUrbanizacion={urb.nombre} 
+          descripcion={urb.descripcion} 
+        />
+      ))
+    ) : (
+      <h1 class="py-8 text-xl text-slate-400 font-semibold flex w-full max-w-xl justify-center items-center text-center">Por el momento no contamos con urbanizaciones para este departamento.</h1>
+    )}
   </div>
 </section>

@@ -1,49 +1,48 @@
 ---
 import CardViviendaComponent from "../components/CardViviendaComponent.astro";
 
-import ventadepa from "../assets/imgs/ventadepa.jpg";
-import ventacasa from "../assets/imgs/ventacasa.jpg";
-import ventaduplex from "../assets/imgs/ventaduplex.jpg";
+const { title } = Astro.params;
+const { viviendas = [] }: { viviendas?: Vivienda[] } = Astro.props;
 
-import SelectTypeComponent from "../components/SelectTypeComponent.astro";
+interface TipoVivienda {
+  id_tipo: string;
+  nombre: string;
+  descripcion?: string;
+  fecha_registro?: string;
+  fecha_actualizacion?: string;
+}
 
-const {title}=Astro.params
-
+interface Vivienda {
+  id_vivienda: string;
+  nombre: string;
+  descripcion: string;
+  portada_url: string;
+  estado?: string;
+  precio: string;
+  permite_financiamiento?: boolean;
+  tipo: TipoVivienda;
+  comprador?: any;
+  galeria?: any[];
+  fecha_registro?: string;
+  fecha_actualizacion?: string;
+}
 ---
-<section id="servicios" class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
 
-
-  <div class="relative z-10 flex w-full justify-center items-center flex-col text-center mb-6 sm:mb-16 lg:mb-20">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold max-w-3xl text-slate-800 mb-4 sm:mb-6 tracking-tight">
-        ENCUENTRA TU LUGAR IDEAL EN <strong class="text-amber-400">{title=="lapaz"?"LA PAZ":title=="cochabamba"?"COCHABAMBA":"SANTA CRUZ"}</strong>
-      </h2>
-      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-        Lotes urbanizados y viviendas en <strong>las mejores zonas de {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong>  con servicios básicos y financiamiento accesible
-      </p>
-  </div>
-  <div class="flex w-full bg-slate-50 justify-between items-center mb-10 px-4 py-1 rounded-full max-w-6xl mx-auto">
-    <SelectTypeComponent active={true} />
-    <h1 class="text-md font-bold  text-slate-700">125 Viviendas</h1>
-  </div>
+<section id="viviendas" class="relative w-full flex flex-col justify-center pt-10 px-4 pb-14 overflow-hidden bg-slate-100">
   <div class="flex flex-col lg:flex-row w-full max-w-6xl justify-center mx-auto gap-10 items-center pb-10">
-    <CardViviendaComponent 
-        img={ventadepa.src}
-        tipo="Departamento"
-        precio="$ 45.000"
-        descripcion="Departamento moderno con excelente iluminación natural, balcón con vista panorámica y acceso rápido a comercios y transporte." 
+    {viviendas.length > 0 ? (
+      viviendas.map((vivienda: Vivienda) => (
+        <CardViviendaComponent
+          img={vivienda.portada_url}
+          tipo={vivienda.tipo.nombre}
+          precio={`Bs ${Number(vivienda.precio).toLocaleString()}`}
+          descripcion={vivienda.descripcion}
         />
-        <CardViviendaComponent 
-        img={ventacasa.src}
-        tipo="Casa"
-        precio="$ 165.000"
-        descripcion="Casa espaciosa en urbanización segura, con jardín amplio, estacionamiento privado y cercanía a colegios y supermercados." 
-        />
-        <CardViviendaComponent 
-        img={ventaduplex.src}
-        tipo="Duplex"
-        precio="$ 34.800"
-        descripcion="Duplex elegante con acabados de calidad, áreas verdes comunes, entorno tranquilo y fácil acceso a vías principales." 
-        />
-
+      ))
+    ) : (
+      <h1 class="py-8 text-xl text-slate-400 font-semibold flex w-full max-w-xl justify-center items-center text-center">
+        Por el momento no contamos con viviendas para este departamento.
+      </h1>
+    )}
   </div>
 </section>

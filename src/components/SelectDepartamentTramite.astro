@@ -1,13 +1,32 @@
 ---
 const { title } = Astro.params;
 const { pathname } = Astro.url;
+const { departamentos } = Astro.props;
 
+function slugify(text: string) {
+  return text
+    ?.toLowerCase()
+    .replace(/\s+/g, '')              
+    .normalize('NFD')                    
+    .replace(/[\u0300-\u036f]/g, '')    
+    .replace(/[^a-z0-9\-]/g, '');      
+}
 
-const tramites = [
-  { name: "La Paz", href: "/tramites/lapaz/" },
-  { name: "Cochabamba", href: "/tramites/cochabamba/" },
-  { name: "Santa Cruz", href: "/tramites/santacruz/" },
-];
+let tramits: any[] = departamentos;
+
+if (!tramits?.length) {
+  tramits =[
+    { nombre: "La Paz", href: "/tramites/lapaz/" },
+    { nombre: "Cochabamba", href: "/tramites/cochabamba/" },
+    { nombre: "Santa Cruz", href: "/tramites/santacruz/" }
+  ];
+}
+
+const tramites = tramits.map((dep) => ({
+  name: dep.nombre,
+  href: `/tramites/${slugify(dep.nombre)}/`
+}));
+
 
 const activeTramite =
   tramites.find(u => pathname.toLowerCase().includes(u.name.toLowerCase()))
