@@ -91,7 +91,12 @@ const departamentoActual = departamentos.find(
   </div>
   <div class="flex w-full border border-gray-300 justify-between items-center mb-10 pl-2 pr-4 py-1 rounded-full max-w-6xl mx-auto">
     <SelectTypeComponent departamentos={departamentos} active={true} />
-    <h1 class="text-md font-bold text-slate-700">25 Urbanizaciones</h1>
+    {category === "lotes" && (
+      <h1 class="text-md font-normal text-slate-700">Urbanizaciones: <strong>{departamentoActual.urbanizaciones.length}</strong> </h1>
+    )}
+    {category === "viviendas" && (
+      <h1 class="text-md font-normal text-slate-700">Viviendas: <strong>{departamentoActual.viviendas.length} </strong></h1>
+    )}
   </div>
 
   {category === "lotes" && (
