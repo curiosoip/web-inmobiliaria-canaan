@@ -121,7 +121,7 @@
       <img
         v-if="galeria[currentIndex]"
         :src="galeria[currentIndex].imagen_url"
-        class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-lg"
+        class="w-full h-64 md:h-72 lg:h-80 object-cover"
         @load="onImageLoad"
         @loadstart="onImageStart"
       />
