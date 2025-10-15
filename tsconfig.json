@@ -4,7 +4,7 @@
     ".astro/types.d.ts",
     "**/*",
      "**/*.vue",
-     "shims-vue.d.ts"
+     "shims-vue.d.ts",
   ],
   "exclude": [
     "dist"

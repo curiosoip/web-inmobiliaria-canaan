@@ -4,9 +4,9 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import FooterSection from "../../../sections/FooterSection.astro";
 import SelectDepartament from "../../../components/SelectDepartament.astro";
-import UrbanizacionesSection from "../../../sections/UrbanizacionesSection.astro";
+import UrbanizacionesSection from "../../../sections/UrbanizacionesSection.vue";
 import NavbarComponent from "../../../components/NavbarComponent.vue";
-import ViviendasSection from "../../../sections/ViviendasSection.astro";
+import ViviendasSection from "../../../sections/ViviendasSection.vue";
 
 import SelectTypeComponent from "../../../components/SelectTypeComponent.astro";
 const { title, category } = Astro.params;
@@ -94,8 +94,20 @@ const departamentoActual = departamentos.find(
     <h1 class="text-md font-bold text-slate-700">25 Urbanizaciones</h1>
   </div>
 
-  {category === "lotes" && <UrbanizacionesSection urbanizaciones={departamentoActual.urbanizaciones} />}
-  {category === "viviendas" && <ViviendasSection viviendas={departamentoActual.viviendas}  />}
+  {category === "lotes" && (
+    <UrbanizacionesSection 
+      client:load 
+      title={title} 
+    />
+  )}
+
+  {category === "viviendas" && (
+    <ViviendasSection 
+      client:load 
+      title={title} 
+    />
+  )}
+
 
   
   <FooterSection />

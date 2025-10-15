@@ -181,14 +181,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="flex w-full h-full">
+  <div class="flex w-full h-full overflow-x-hidden">
+
     <div ref="mapContainer" class="flex-1 rounded-lg"></div>
 
     <transition name="slide">
-      <div
-        v-if="showSidebar"
-        class="w-84 bg-slate-50  p-4 relative"
-      >
+      <div v-if="showSidebar" class="w-84 max-w-full bg-slate-50 p-4 relative">
+
         <button
           @click="showSidebar = false"
           class="absolute cursor-pointer top-2 right-2 text-slate-800 bg-amber-400 hover:bg-amber-500 p-2 rounded-full"
