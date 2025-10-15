@@ -90,12 +90,15 @@
         <h3 class="flex gap-2 items-center text-sm font-semibold text-white">
           <svg v-if="tipo==='casa'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><g fill="none"><path fill="url(#SVGkm4eqcHj)" d="M6 9h4v5H6z"/><path fill="url(#SVG4sqiUdhg)" d="M8.687 2.273a1 1 0 0 0-1.374 0l-4.844 4.58A1.5 1.5 0 0 0 2 7.943v4.569a1.5 1.5 0 0 0 1.5 1.5h3v-4a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v4h3a1.5 1.5 0 0 0 1.5-1.5v-4.57a1.5 1.5 0 0 0-.47-1.09z"/><path fill="url(#SVGbhYexcuE)" fill-rule="evenodd" d="m8.004 2.636l5.731 5.41a.75.75 0 1 0 1.03-1.091L8.86 1.382a1.25 1.25 0 0 0-1.724.007L1.23 7.059a.75.75 0 0 0 1.038 1.082z" clip-rule="evenodd"/><defs><linearGradient id="SVGkm4eqcHj" x1="8" x2="4.796" y1="9" y2="14.698" gradientUnits="userSpaceOnUse"><stop stop-color="#944600"/><stop offset="1" stop-color="#cd8e02"/></linearGradient><linearGradient id="SVG4sqiUdhg" x1="3.145" x2="14.93" y1="1.413" y2="10.981" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd394"/><stop offset="1" stop-color="#ffb357"/></linearGradient><linearGradient id="SVGbhYexcuE" x1="10.262" x2="6.945" y1="-.696" y2="7.895" gradientUnits="userSpaceOnUse"><stop stop-color="#ff921f"/><stop offset="1" stop-color="#eb4824"/></linearGradient></defs></g></svg>
           <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="none"><path fill="url(#SVGteQkLezk)" d="M5.5 2A1.5 1.5 0 0 0 4 3.5v14a.5.5 0 0 0 .5.5h10.003C15.33 18 16 17.33 16 16.502V9.5A1.5 1.5 0 0 0 14.5 8H13V3.5A1.5 1.5 0 0 0 11.5 2z"/><path fill="url(#SVGtrUnjOrn)" d="M5.5 2A1.5 1.5 0 0 0 4 3.5v14a.5.5 0 0 0 .5.5h10.003C15.33 18 16 17.33 16 16.502V9.5A1.5 1.5 0 0 0 14.5 8H13V3.5A1.5 1.5 0 0 0 11.5 2z"/><path fill="url(#SVGlt9c7b2t)" d="M5.5 2A1.5 1.5 0 0 0 4 3.5v14a.5.5 0 0 0 .5.5h10.003C15.33 18 16 17.33 16 16.502V9.5A1.5 1.5 0 0 0 14.5 8H13V3.5A1.5 1.5 0 0 0 11.5 2z"/><path fill="url(#SVGp5rzqbsF)" d="M6.75 6.5a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5"/><path fill="url(#SVGp5rzqbsF)" d="M11 5.75a.75.75 0 1 0-1.5 0a.75.75 0 0 0 1.5 0"/><path fill="url(#SVGp5rzqbsF)" d="M11 8.75a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0"/><path fill="url(#SVGp5rzqbsF)" d="M7.5 8.75a.75.75 0 1 0-1.5 0a.75.75 0 0 0 1.5 0"/><path fill="url(#SVGp5rzqbsF)" d="M7.5 11.75a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0"/><path fill="url(#SVGNehJlu7j)" d="M14 15h3v4h-3z"/><path fill="url(#SVGVuhbQc6Y)" d="M12 15.46c0-.292.127-.569.349-.759l2.826-2.422a.5.5 0 0 1 .651 0l2.825 2.422c.221.19.349.467.349.76v3.04a.5.5 0 0 1-.5.5l-2-.001v-2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V19h-2a.5.5 0 0 1-.5-.5z"/><path fill="url(#SVG75GD8bFX)" fill-rule="evenodd" d="M14.518 11.359a1.5 1.5 0 0 1 1.964 0l3.26 2.824a.75.75 0 1 1-.983 1.134L15.5 12.492l-3.259 2.825a.75.75 0 0 1-.982-1.134z" clip-rule="evenodd"/><defs><linearGradient id="SVGteQkLezk" x1="4" x2="19.257" y1="2.5" y2="17.149" gradientUnits="userSpaceOnUse"><stop stop-color="#29c3ff"/><stop offset="1" stop-color="#2764e7"/></linearGradient><linearGradient id="SVGp5rzqbsF" x1="7.35" x2="11.401" y1="4.167" y2="12.916" gradientUnits="userSpaceOnUse"><stop stop-color="#fdfdfd"/><stop offset="1" stop-color="#b3e0ff"/></linearGradient><linearGradient id="SVGNehJlu7j" x1="15.5" x2="12.853" y1="15" y2="19.413" gradientUnits="userSpaceOnUse"><stop stop-color="#944600"/><stop offset="1" stop-color="#cd8e02"/></linearGradient><linearGradient id="SVGVuhbQc6Y" x1="11.764" x2="18.118" y1="12.349" y2="18.864" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd394"/><stop offset="1" stop-color="#ffb357"/></linearGradient><linearGradient id="SVG75GD8bFX" x1="15.929" x2="15.193" y1="9.711" y2="15.112" gradientUnits="userSpaceOnUse"><stop stop-color="#ff921f"/><stop offset="1" stop-color="#eb4824"/></linearGradient><radialGradient id="SVGtrUnjOrn" cx="0" cy="0" r="1" gradientTransform="matrix(0 3.5 -2.3125 0 13 17)" gradientUnits="userSpaceOnUse"><stop stop-color="#4a43cb"/><stop offset=".914" stop-color="#4a43cb" stop-opacity="0"/></radialGradient><radialGradient id="SVGlt9c7b2t" cx="0" cy="0" r="1" gradientTransform="matrix(-4.5 3.5 -1.8232 -2.3441 15 14)" gradientUnits="userSpaceOnUse"><stop stop-color="#4a43cb"/><stop offset=".914" stop-color="#4a43cb" stop-opacity="0"/></radialGradient></defs></g></svg>
-          <strong class="text-lg text-amber-400 font-bold">
+          <div class="flex flex-col ">
+             <strong class="text-sm text-amber-400 font-bold">
             {{ nombreDepartamento }}
-          </strong>
-          <span class="text-white ml-2 text-xs font-semibold">
-            / {{ tipo }}
-          </span>
+            </strong>
+            <span class="text-white  text-lg font-semibold">
+              {{ nombre }}
+            </span>
+          </div>
+         
         </h3>
         <button
           @click="mostrarModal = false"
@@ -126,10 +129,10 @@
         @loadstart="onImageStart"
       />
 
-      <button @click="prevImage" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full">
+      <button v-if="galeria && galeria.length > 1" @click="prevImage" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M20.834 8.037L9.64 14.5c-1.43.824-1.43 2.175 0 3l11.194 6.463c1.43.826 2.598.15 2.598-1.5V9.537c0-1.65-1.17-2.326-2.598-1.5"/></svg>
       </button>
-      <button @click="nextImage" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full">
+      <button v-if="galeria && galeria.length > 1" @click="nextImage" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
       </button>
 
@@ -161,7 +164,7 @@
           <p class="text-sm font-normal ">Superficie: </p>{{ superficie }} M2
           </div>
            <a
-        href="https://wa.me/59170516064?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20por%20favor."
+        :href="`https://wa.me/59170516064?text=Hola,%20quisiera%20pasar%20a%20ver%20-%20${tipo}:%20${nombre}-${nombreDepartamento}%20por%20favor.`"
         target="_blank"
         class="cursor-pointer text-white flex w-full gap-1 mt-3 justify-center items-center bg-emerald-600 hover:bg-emerald-700 font-medium rounded-full text-sm px-2 py-1 shadow-md"
       >
@@ -195,6 +198,7 @@ const props = defineProps<{
   img: string;
   nombreDepartamento: string; 
   tipo: string;
+  nombre:string;
   descripcion: string;
   precio: string;
   superficie:string;

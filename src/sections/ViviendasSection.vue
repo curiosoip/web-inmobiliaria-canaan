@@ -34,6 +34,7 @@
         :key="vivienda.id_vivienda"
         :img="vivienda.portada_url"
         :nombreDepartamento="departamentoActual.nombre"
+        :nombre="vivienda.nombre"
         :tipo="vivienda.tipo?.nombre"
         :precio="`Bs ${Number(vivienda.precio).toLocaleString()}`"
         :superficie=vivienda.superficie
