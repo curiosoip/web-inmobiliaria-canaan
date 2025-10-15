@@ -33,6 +33,7 @@
         v-for="vivienda in viviendas"
         :key="vivienda.id_vivienda"
         :img="vivienda.portada_url"
+        :nombreDepartamento="departamentoActual.nombre"
         :tipo="vivienda.tipo?.nombre"
         :precio="`Bs ${Number(vivienda.precio).toLocaleString()}`"
         :superficie=vivienda.superficie
@@ -99,6 +100,9 @@ const props = defineProps<{ title: string }>();
 
 const viviendas = ref<Vivienda[]>([]);
 const loading = ref(true);
+let deps=ref<[]>;
+
+const departamentoActual = ref<any>(null);
 
 onMounted(async () => {
   try {
@@ -114,11 +118,17 @@ onMounted(async () => {
         .replace(/[^a-z0-9]/g, "");
 
     const dep = data.find((d: any) => slugify(d.nombre).includes(props.title));
+
     viviendas.value = dep?.viviendas ?? [];
+    departamentoActual.value = dep; 
   } catch (err) {
     console.error("Error al obtener viviendas:", err);
   } finally {
     loading.value = false;
   }
 });
+
+
+
+
 </script>

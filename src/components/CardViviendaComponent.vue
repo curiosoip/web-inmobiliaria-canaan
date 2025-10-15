@@ -105,29 +105,38 @@
         </button>
       </div>
 
-      <!-- Slider con flechas -->
-      <div class="relative w-full h-64 flex items-center justify-center bg-gray-100">
+     <div v-if="galeria?.length" class="relative w-full h-64 flex items-center justify-center bg-gray-100">
 
-        <img
-        v-if="galeria && galeria.length"
+      <!-- Loader -->
+      <div
+        v-if="!imagenCargada"
+        class="absolute inset-0 flex items-center justify-center bg-gray-200/50 rounded-lg"
+      >
+        <svg class="animate-spin h-10 w-10 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+      </div>
+
+      <img
+        v-if="galeria[currentIndex]"
         :src="galeria[currentIndex].imagen_url"
         class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-lg"
+        @load="onImageLoad"
+        @loadstart="onImageStart"
       />
 
+      <button @click="prevImage" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M20.834 8.037L9.64 14.5c-1.43.824-1.43 2.175 0 3l11.194 6.463c1.43.826 2.598.15 2.598-1.5V9.537c0-1.65-1.17-2.326-2.598-1.5"/></svg>
+      </button>
+      <button @click="nextImage" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
+      </button>
 
-        <button
-          @click="prevImage"
-          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="mr-1" viewBox="0 0 32 32"><path fill="currentColor" d="M20.834 8.037L9.64 14.5c-1.43.824-1.43 2.175 0 3l11.194 6.463c1.43.826 2.598.15 2.598-1.5V9.537c0-1.65-1.17-2.326-2.598-1.5"/></svg>
-        </button>
+    </div>
 
-        <button
-          @click="nextImage"
-          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-800/20 text-amber-500 cursor-pointer hover:text-white p-2 rounded-full"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="mr-1"  viewBox="0 0 32 32"><path fill="currentColor" d="M11.166 23.963L22.36 17.5c1.43-.824 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.17 2.326 2.598 1.5z"/></svg>
-        </button>
+      <div v-else class="flex w-full py-8 justify-center items-center text-3xl text-center text-slate-500">
+        Sin imágenes
       </div>
 
       <div
@@ -184,6 +193,7 @@ import PlanimetriaMapComponent from "./PlanimetriaMapComponent.vue";
 
 const props = defineProps<{
   img: string;
+  nombreDepartamento: string; 
   tipo: string;
   descripcion: string;
   precio: string;
@@ -194,6 +204,8 @@ const props = defineProps<{
 
 const mostrarModal = ref(false);
 const currentIndex = ref(0);
+const imagenCargada = ref(false);
+
 
 
 // Determinar ícono según tipo
@@ -205,23 +217,25 @@ const iconTipo = computed(() => {
   }
 });
 
+function onImageStart() {
+  imagenCargada.value = false; // comienza la carga
+}
+
+function onImageLoad() {
+  imagenCargada.value = true; // imagen cargada
+}
+
+
 
 function nextImage() {
   if (!props.galeria || !props.galeria.length) return;
   currentIndex.value = (currentIndex.value + 1) % props.galeria.length;
+  imagenCargada.value = false;
 }
 
 function prevImage() {
   if (!props.galeria || !props.galeria.length) return;
-  currentIndex.value =
-    (currentIndex.value - 1 + props.galeria.length) % props.galeria.length;
+  currentIndex.value = (currentIndex.value - 1 + props.galeria.length) % props.galeria.length;
+  imagenCargada.value = false;
 }
-
-
-// Simular el nombre del departamento
-const nombreDepartamento = computed(() => {
-  if (window.location.pathname.includes("lapaz")) return "La Paz";
-  if (window.location.pathname.includes("cochabamba")) return "Cochabamba";
-  return "Santa Cruz";
-});
 </script>
