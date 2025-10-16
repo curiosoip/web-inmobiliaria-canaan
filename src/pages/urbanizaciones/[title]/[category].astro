@@ -89,7 +89,7 @@ const departamentoActual = departamentos.find(
         Lotes urbanizados y viviendas en <strong>las mejores zonas de {title=="lapaz"?"La Paz":title=="cochabamba"?"Cochabamba":"Santa Cruz"}</strong>  con servicios básicos y financiamiento accesible
       </p>
   </div>
-  <div class="flex w-full border border-gray-300 justify-between items-center mb-10 pl-2 pr-4 py-1 rounded-full max-w-6xl mx-auto">
+  <div class="flex w-full border border-gray-300 justify-between items-center mb-10 pl-2 pr-4 py-1 rounded-full max-w-4xl mx-auto">
     <SelectTypeComponent departamentos={departamentos} active={true} />
     {category === "lotes" && (
       <h1 class="text-md font-normal text-slate-700">Urbanizaciones: <strong>{departamentoActual.urbanizaciones.length}</strong> </h1>
